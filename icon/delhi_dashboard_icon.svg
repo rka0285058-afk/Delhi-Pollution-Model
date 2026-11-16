@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Delhi pollution dashboard">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16364f"/><stop offset="1" stop-color="#0b1c2c"/></linearGradient>
+    <radialGradient id="heat" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd166"/><stop offset=".35" stop-color="#ef6f3c"/><stop offset=".7" stop-color="#d1495b" stop-opacity=".55"/><stop offset="1" stop-color="#d1495b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="r"><rect width="512" height="512" rx="112"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <circle cx="330" cy="188" r="190" fill="url(#heat)"/>
+    <circle cx="330" cy="188" r="62" fill="none" stroke="#ffe3a3" stroke-opacity=".55" stroke-width="6"/>
+    <circle cx="330" cy="188" r="22" fill="#fff6dc"/>
+    <g fill="#e8f1f7">
+      <rect x="82" y="300" width="52" height="96" rx="12" opacity=".55"/>
+      <rect x="156" y="258" width="52" height="138" rx="12" opacity=".75"/>
+      <rect x="230" y="212" width="52" height="184" rx="12"/>
+    </g>
+    <path d="M-10 430 C 70 396, 120 460, 200 428 S 330 392, 400 430 S 480 452, 530 424 V 540 H -10 Z" fill="#2aa7c9"/>
+    <path d="M-10 462 C 80 430, 130 492, 210 460 S 340 428, 410 464 S 490 484, 530 458 V 540 H -10 Z" fill="#1c7ea1"/>
+  </g>
+</svg>

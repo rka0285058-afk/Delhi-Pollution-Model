@@ -1,0 +1,24 @@
+{
+  "baseline_attrib_deaths_per_yr_2011_pop": 8149.812402471339,
+  "mc_deaths_p05_p95": [
+    8166.601987728698,
+    8510.878521908664
+  ],
+  "validation_AF_at_100ugm3_pct": 11.294745304885456,
+  "lancet_reported_pct": 11.5,
+  "sewage": {
+    "noncompliant_share": 0.4399332591768632,
+    "untreated_share": 0.1782536151279199,
+    "treated_but_noncompliant_MLD": 941.0,
+    "spare_capacity_MLD": 519.0
+  },
+  "city_pm25": 96.0,
+  "child_weighted_pm25": 95.96365493591533,
+  "top3_districts": [
+    "North West",
+    "North East",
+    "West"
+  ],
+  "spearman_vulnerability_vs_air_AF": -0.009901475429766743,
+  "water_downstream_WQHI": 0.772525111371841
+}

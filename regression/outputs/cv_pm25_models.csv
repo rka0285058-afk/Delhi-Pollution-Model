@@ -1,0 +1,11 @@
+model,params,baseline,cv_rmse,cv_mae,cv_bias,cv_rmse_excl_2020
+Log-linear trend + 2020 dip,3,False,8.01,5.733,-0.505,7.224
+Linear + 2020 dip + 2018 network step,4,False,8.071,5.781,-1.692,7.586
+Linear trend + 2020 dip,3,False,8.278,6.05,-1.658,7.723
+Exponential decay to a floor,3,False,8.661,7.095,1.754,7.72
+Baseline: last year,0,True,8.924,7.83,2.83,8.168
+Quadratic (ridge) + 2020 dip,4,False,9.004,7.328,0.342,8.693
+Linear trend,2,False,9.035,7.048,-3.197,8.615
+Robust trend (Theil-Sen),2,False,9.258,7.209,-5.087,9.252
+Baseline: mean of last 3 years,0,True,9.272,7.56,4.487,7.61
+Baseline: mean of training years,0,True,19.616,18.166,17.916,17.797

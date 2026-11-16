@@ -1,0 +1,23 @@
+{
+  "SOURCES": {
+    "census_districts": "Census of India 2011 district table (population, sex ratio, literacy, density, growth) - census2011.co.in mirror of Census data; same totals as Economic Survey of Delhi, delhiplanning.delhi.gov.in",
+    "child_0_6": "Census 2011 Provisional Population Totals, NCT Delhi: 0-6 population by district (total 1,970,510). South Delhi = total minus the other 8 districts (DERIVED).",
+    "pm25_city": "CSE/CREA analysis of CPCB real-time data: Delhi 2025 annual PM2.5 = 96 ug/m3 (2024: ~105); Delhi Economic Survey 2025-26 (CAAQMS): 100 ug/m3. All 40 stations >= 1.8x NAAQS(40) i.e. >= 72.",
+    "pm25_stations": "CSE analysis of CPCB data (Business Standard, Dec 2025): Jahangirpuri 119, Bawana/Wazirpur 113, Anand Vihar 111, Mundka/Rohini/Ashok Vihar 101-103; CSE/CREA 2025 (Tribune): Jahangirpuri 130; CSE 2024-25: Anand Vihar annual 136.",
+    "yamuna": "CPCB NWMP monthly data Jan-Jun 2025 (PIB release 2150744, Ministry of Jal Shakti, 31 Jul 2025); standards DO>5, BOD<3, FC<2500 MPN/100ml.",
+    "sewage": "PIB 2150744 (DJB data): sewage generated 3,596 MLD; 37 STPs capacity 3,474 MLD; utilised 2,955 MLD (June 2025); 2,014 MLD compliant with DPCC norms; ~641 MLD untreated.",
+    "water_access": "Delhi Economic Survey 2025-26: 93.5% households have piped water; about one-third of Delhi lives in sub-standard housing (Economic Survey of Delhi, Ch.14).",
+    "mortality": "SRS Statistical Report 2023 (ORGI): Delhi crude death rate 4.5 per 1,000.",
+    "exposure_response": "Lancet Planetary Health (Ljungman et al., 2024, 10 Indian cities): +1.42% daily deaths per 10 ug/m3 PM2.5 (2-day), WHO 15 ug/m3 reference; Delhi 11.5% of deaths (~12,000/yr) attributable, 2008-2019."
+  },
+  "ASSUMPTIONS": {
+    "pm_city_mean": "U(96,100): CSE/CREA 96 vs Economic Survey 100",
+    "station_shrinkage_k": "U(1,4): district PM = n/(n+k)*station mean + (1-n/(n+k))*city mean, because monitors sit at hotspots (base k=2)",
+    "unmeasured_districts": "relative factor U(0.8,1.2), then rescaled so the population-weighted mean equals the city mean, floored at 72",
+    "informal_share": "city mean U(0.30,0.36) ('about one-third in sub-standard housing'); allocated to districts in proportion to illiteracy (PROXY - replace with Census slum data via --informal)",
+    "water_reach_map": "districts on/near polluted drains and the downstream Yamuna get the mean downstream index; North gets the mean of upstream (Palla) and downstream; multiplier U(0.7,1.0)",
+    "weights": "air weight w_a U(0.5,0.75) (stronger health evidence than for water); child weight w_c U(0.3,0.7)",
+    "water_scenarios": "water hazard scales linearly with the non-compliant share of sewage (first-order)",
+    "susceptibility": "base case = 1.0 for all groups (no invented amplification); sensitivity run uses 1.25 for children and informal residents (illustrative)"
+  }
+}

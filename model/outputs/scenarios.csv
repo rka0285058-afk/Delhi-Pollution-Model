@@ -1,0 +1,9 @@
+scenario,delhi_mean_pm25,attrib_deaths_yr,avoided_deaths_yr,sewage_noncompliant_share,citywide_risk_index,top_district,max_district_RRI,note
+Baseline (2025),96.0,8149.812,0.0,0.44,1.0,North West,1.171,
+PM2.5 -20%,76.8,6301.76,1848.053,0.44,0.864,North West,1.01,
+PM2.5 -40%,57.6,4402.706,3747.106,0.44,0.724,North West,0.844,
+PM2.5 to NAAQS (40 ug/m3),40.0,2615.895,5533.917,0.44,0.593,North West,0.687,
+Fix 14 non-compliant STPs,96.0,8149.812,0.0,0.178,0.762,North West,0.907,water hazard scaled with non-compliant sewage share
++ spare STP capacity takes untreated flow,96.0,8149.812,0.0,0.034,0.631,North West,0.762,water hazard scaled with non-compliant sewage share
++ add 122 MLD: 100% compliant,96.0,8149.812,0.0,0.0,0.6,North West,0.728,water hazard scaled with non-compliant sewage share
+Both: PM2.5 -40% and 100% compliant sewage,57.6,4402.706,3747.106,0.0,0.324,North West,0.401,

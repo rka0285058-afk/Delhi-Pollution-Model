@@ -1,0 +1,140 @@
+{
+  "A_chosen_model": "Log-linear trend + 2020 dip",
+  "A_cv_rmse_chosen": 8.00996477330482,
+  "A_cv_rmse_best_baseline": 8.924404742054232,
+  "A_loo_rmse_chosen": 6.814991003821793,
+  "A_residual_lag1_autocorr": 0.12615197240993828,
+  "A_durbin_watson": 1.7331537547700682,
+  "A_bootstrap_95pi_forward_cv_coverage": 0.9,
+  "A_params": {
+    "coef": [
+      4.953588049594514,
+      -0.026046094737141545,
+      -0.1392502106225572
+    ]
+  },
+  "A_forecast": [
+    {
+      "year": 2026,
+      "pm25_point": 93.4,
+      "pm25_p025": 80.5,
+      "pm25_p50": 93.0,
+      "pm25_p975": 107.2,
+      "deaths_per_100k_p50": 46.9,
+      "deaths_per_100k_p025": 39.7,
+      "deaths_per_100k_p975": 54.9,
+      "pm25_p50_alt_series": 94.2
+    },
+    {
+      "year": 2027,
+      "pm25_point": 91.0,
+      "pm25_p025": 78.4,
+      "pm25_p50": 90.6,
+      "pm25_p975": 105.1,
+      "deaths_per_100k_p50": 45.5,
+      "deaths_per_100k_p025": 38.5,
+      "deaths_per_100k_p975": 53.7,
+      "pm25_p50_alt_series": 91.8
+    },
+    {
+      "year": 2028,
+      "pm25_point": 88.7,
+      "pm25_p025": 75.5,
+      "pm25_p50": 88.1,
+      "pm25_p975": 102.0,
+      "deaths_per_100k_p50": 44.1,
+      "deaths_per_100k_p025": 36.8,
+      "deaths_per_100k_p975": 52.0,
+      "pm25_p50_alt_series": 89.3
+    },
+    {
+      "year": 2029,
+      "pm25_point": 86.4,
+      "pm25_p025": 73.3,
+      "pm25_p50": 86.0,
+      "pm25_p975": 100.8,
+      "deaths_per_100k_p50": 42.8,
+      "deaths_per_100k_p025": 35.5,
+      "deaths_per_100k_p975": 51.3,
+      "pm25_p50_alt_series": 87.2
+    },
+    {
+      "year": 2030,
+      "pm25_point": 84.2,
+      "pm25_p025": 71.0,
+      "pm25_p50": 83.9,
+      "pm25_p975": 98.2,
+      "deaths_per_100k_p50": 41.7,
+      "deaths_per_100k_p025": 34.2,
+      "deaths_per_100k_p975": 49.8,
+      "pm25_p50_alt_series": 84.6
+    }
+  ],
+  "B": {
+    "slope": 0.8147459727385378,
+    "slope_se": 0.1132072727411509,
+    "intercept": 37.08426270136307,
+    "r2": 0.8961864944802822,
+    "loo_rmse_ols": 2.3855014085952186,
+    "loo_rmse_ratio": 4.392183452488722,
+    "loo_rmse_mean": 6.9854075305129415,
+    "pred_2026": 93.30173482032218,
+    "pi": [
+      86.56183400106458,
+      100.04163563957978
+    ],
+    "ratio_method_2026": 88.155325197036,
+    "pred_2026_excl_2020": 93.2577519379845,
+    "slope_excl_2020": 0.8173449612403102
+  },
+  "C": {
+    "cv": [
+      {
+        "model": "Baseline: district mean",
+        "loo_rmse": 1.477,
+        "loo_r2": -0.266
+      },
+      {
+        "model": "Literacy only",
+        "loo_rmse": 1.396,
+        "loo_r2": -0.13
+      },
+      {
+        "model": "Growth 2001-11 only",
+        "loo_rmse": 0.935,
+        "loo_r2": 0.493
+      },
+      {
+        "model": "Ridge: literacy + log density + growth",
+        "loo_rmse": 0.285,
+        "loo_r2": 0.953
+      }
+    ],
+    "coef_standardised": {
+      "literacy": -0.417,
+      "log_density": 0.305,
+      "growth": 1.009
+    },
+    "ridge_alpha": 0.01,
+    "correlations_with_child_share": {
+      "literacy": -0.58,
+      "growth": 0.88,
+      "log_density": 0.49
+    },
+    "robustness_loo_r2_without_Central_NewDelhi": {
+      "mean": -0.3611111111111114,
+      "gr": -0.5158158664228656,
+      "ridge": 0.21621098984370635
+    },
+    "permutation_p_value": 0.003992015968063872,
+    "permutation_95th_pct_r2": -0.15312142131275233,
+    "growth_coef_positive_in_loo_refits": 1.0
+  },
+  "SOURCES": {
+    "PIB": "PIB (CPCB data): Delhi annual PM2.5 2018-2025 and Jan-29 Oct averages 2018-2026 (PRID 2210935, 2331032)",
+    "REV": "CPCB-repository annual PM2.5 2010-2022 compiled in a peer-reviewed Delhi air-quality review (few monitors before ~2017)",
+    "CENSUS": "Census of India 2011 district table (population, literacy, density, 2001-11 growth) and 0-6 population",
+    "ER": "Lancet Planetary Health 2024 exposure-response: +1.42% daily deaths per 10 ug/m3 PM2.5 above 15 ug/m3",
+    "CDR": "SRS 2023: Delhi crude death rate 4.5 per 1,000"
+  }
+}

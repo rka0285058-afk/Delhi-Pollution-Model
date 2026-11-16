@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delhi Pollution Scenarios 2010–2030</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22 role=%22img%22 aria-label=%22Delhi pollution dashboard%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2316364f%22/%3E%3Cstop offset=%221%22 stop-color=%22%230b1c2c%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22heat%22 cx=%2250%25%22 cy=%2250%25%22 r=%2250%25%22%3E%3Cstop offset=%220%22 stop-color=%22%23ffd166%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23ef6f3c%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23d1495b%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d1495b%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3CclipPath id=%22r%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22112%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path=%22url%28%23r%29%22%3E%3Crect width=%22512%22 height=%22512%22 fill=%22url%28%23bg%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%22190%22 fill=%22url%28%23heat%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2262%22 fill=%22none%22 stroke=%22%23ffe3a3%22 stroke-opacity=%22.55%22 stroke-width=%226%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2222%22 fill=%22%23fff6dc%22/%3E%3Cg fill=%22%23e8f1f7%22%3E%3Crect x=%2282%22 y=%22300%22 width=%2252%22 height=%2296%22 rx=%2212%22 opacity=%22.55%22/%3E%3Crect x=%22156%22 y=%22258%22 width=%2252%22 height=%22138%22 rx=%2212%22 opacity=%22.75%22/%3E%3Crect x=%22230%22 y=%22212%22 width=%2252%22 height=%22184%22 rx=%2212%22/%3E%3C/g%3E%3Cpath d=%22M-10 430 C 70 396, 120 460, 200 428 S 330 392, 400 430 S 480 452, 530 424 V 540 H -10 Z%22 fill=%22%232aa7c9%22/%3E%3Cpath d=%22M-10 462 C 80 430, 130 492, 210 460 S 340 428, 410 464 S 490 484, 530 458 V 540 H -10 Z%22 fill=%22%231c7ea1%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22 role=%22img%22 aria-label=%22Delhi pollution dashboard%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2316364f%22/%3E%3Cstop offset=%221%22 stop-color=%22%230b1c2c%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22heat%22 cx=%2250%25%22 cy=%2250%25%22 r=%2250%25%22%3E%3Cstop offset=%220%22 stop-color=%22%23ffd166%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23ef6f3c%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23d1495b%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d1495b%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3CclipPath id=%22r%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22112%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path=%22url%28%23r%29%22%3E%3Crect width=%22512%22 height=%22512%22 fill=%22url%28%23bg%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%22190%22 fill=%22url%28%23heat%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2262%22 fill=%22none%22 stroke=%22%23ffe3a3%22 stroke-opacity=%22.55%22 stroke-width=%226%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2222%22 fill=%22%23fff6dc%22/%3E%3Cg fill=%22%23e8f1f7%22%3E%3Crect x=%2282%22 y=%22300%22 width=%2252%22 height=%2296%22 rx=%2212%22 opacity=%22.55%22/%3E%3Crect x=%22156%22 y=%22258%22 width=%2252%22 height=%22138%22 rx=%2212%22 opacity=%22.75%22/%3E%3Crect x=%22230%22 y=%22212%22 width=%2252%22 height=%22184%22 rx=%2212%22/%3E%3C/g%3E%3Cpath d=%22M-10 430 C 70 396, 120 460, 200 428 S 330 392, 400 430 S 480 452, 530 424 V 540 H -10 Z%22 fill=%22%232aa7c9%22/%3E%3Cpath d=%22M-10 462 C 80 430, 130 492, 210 460 S 340 428, 410 464 S 490 484, 530 458 V 540 H -10 Z%22 fill=%22%231c7ea1%22/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2430;--mute:#5d6b7c;--line:#dfe4ea;--accent:#1f6feb;--grid:#e8ecf1;--warn:#fff6e0;--warnb:#f0d58a}
+@media (prefers-color-scheme:dark){:root{--bg:#10151c;--card:#171e28;--ink:#e6ebf2;--mute:#9aa8b9;--line:#2a3442;--accent:#5aa2ff;--grid:#232d3a;--warn:#2b2615;--warnb:#6b5a1f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:18px 20px 6px;max-width:1280px;margin:0 auto}
+h1{font-size:21px;margin:0 0 4px}
+.sub{color:var(--mute);margin:0}
+main{max-width:1280px;margin:0 auto;padding:10px 20px 40px;display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card h2{font-size:14px;margin:0 0 8px;letter-spacing:.2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px 18px;align-items:end}
+label{display:block;font-size:12px;color:var(--mute);margin-bottom:3px}
+label b{color:var(--ink);font-weight:600}
+select,input[type=range],button{width:100%}
+select,button{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+button{cursor:pointer}button:hover{border-color:var(--accent)}
+.row{display:flex;gap:8px}
+.controls>div:first-child{grid-column:span 2}
+@media(max-width:600px){.controls>div:first-child{grid-column:span 1}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{display:flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--line);border-radius:999px;cursor:pointer;user-select:none;font-size:12.5px}
+.chip i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.chip.off{opacity:.38}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+.kpi small{color:var(--mute);display:block;font-size:11.5px}
+.kpi strong{font-size:20px}
+.kpi em{font-style:normal;font-size:11.5px;color:var(--mute)}
+canvas{width:100%;display:block}
+#main{height:380px}.small{height:250px}#dbar{height:280px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{padding:5px 7px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mute);font-weight:600;position:sticky;top:0;background:var(--card)}
+.scroll{overflow:auto;max-height:340px}
+#tip{position:fixed;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.18);display:none;z-index:9;max-width:260px}
+.note{background:var(--warn);border:1px solid var(--warnb);border-radius:8px;padding:9px 12px;font-size:12.5px}
+.narr{font-size:13.5px;margin:8px 0 0}
+details summary{cursor:pointer;font-weight:600}
+details ul{margin:8px 0 0 18px;padding:0}details li{margin:3px 0}
+a{color:var(--accent)}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--mute);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--mute);margin-top:4px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px;border:2px solid currentColor;border-radius:50%}
+.legend .f::before{background:currentColor}
+.controls>div,.row>div,.card,main>section{min-width:0}
+select{max-width:100%;text-overflow:ellipsis}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;margin-top:8px}
+@media(max-width:860px){.mapgrid{grid-template-columns:1fr}}
+#map{height:540px}
+#hotlist{margin:6px 0 0 18px;padding:0}#hotlist li{margin:0 0 7px}
+.checks{display:flex;flex-wrap:wrap;gap:4px 14px;margin:8px 0 2px;font-size:12.5px}
+.checks label{display:flex;align-items:center;gap:5px;margin:0;color:var(--ink)}
+.checks input{width:auto}
+.mstat{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-top:6px;font-size:13px}
+
+/* launcher icon: click to open / close the dashboard */
+#launch{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(circle at 50% 40%,#16364f,#0b1c2c 70%);color:#e8f1f7;transition:opacity .45s ease,visibility .45s;text-align:center;padding:24px}
+#launch.hide{opacity:0;visibility:hidden;pointer-events:none}
+#launch button{all:unset;cursor:pointer;border-radius:30px;line-height:0;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+#launch button:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 26px 60px rgba(239,111,60,.35)}
+#launch button:focus-visible{outline:3px solid #ffd166;outline-offset:6px}
+#launch button img{width:min(44vw,200px);height:auto;display:block}
+#launch h1{font:600 22px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;margin:0}
+#launch p{font:14px/1.5 system-ui,sans-serif;margin:0;color:#9db2c5}
+#dock{all:unset;position:fixed;right:14px;bottom:14px;z-index:900;cursor:pointer;width:54px;height:54px;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,.35);line-height:0;transition:transform .2s}
+#dock:hover{transform:scale(1.08)}#dock:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#dock img{width:100%;height:100%;display:block;border-radius:15px}
+@media (prefers-reduced-motion:reduce){#launch,#launch button,#dock{transition:none}}
+</style>
+</head>
+<body>
+<div id="launch" role="dialog" aria-label="Open dashboard">
+  <button id="open" aria-label="Open the Delhi pollution dashboard"><img alt="" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22 role=%22img%22 aria-label=%22Delhi pollution dashboard%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2316364f%22/%3E%3Cstop offset=%221%22 stop-color=%22%230b1c2c%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22heat%22 cx=%2250%25%22 cy=%2250%25%22 r=%2250%25%22%3E%3Cstop offset=%220%22 stop-color=%22%23ffd166%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23ef6f3c%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23d1495b%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d1495b%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3CclipPath id=%22r%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22112%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path=%22url%28%23r%29%22%3E%3Crect width=%22512%22 height=%22512%22 fill=%22url%28%23bg%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%22190%22 fill=%22url%28%23heat%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2262%22 fill=%22none%22 stroke=%22%23ffe3a3%22 stroke-opacity=%22.55%22 stroke-width=%226%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2222%22 fill=%22%23fff6dc%22/%3E%3Cg fill=%22%23e8f1f7%22%3E%3Crect x=%2282%22 y=%22300%22 width=%2252%22 height=%2296%22 rx=%2212%22 opacity=%22.55%22/%3E%3Crect x=%22156%22 y=%22258%22 width=%2252%22 height=%22138%22 rx=%2212%22 opacity=%22.75%22/%3E%3Crect x=%22230%22 y=%22212%22 width=%2252%22 height=%22184%22 rx=%2212%22/%3E%3C/g%3E%3Cpath d=%22M-10 430 C 70 396, 120 460, 200 428 S 330 392, 400 430 S 480 452, 530 424 V 540 H -10 Z%22 fill=%22%232aa7c9%22/%3E%3Cpath d=%22M-10 462 C 80 430, 130 492, 210 460 S 340 428, 410 464 S 490 484, 530 458 V 540 H -10 Z%22 fill=%22%231c7ea1%22/%3E%3C/g%3E%3C/svg%3E"></button>
+  <h1>Delhi air &amp; water pollution — vulnerability dashboard</h1>
+  <p>Click the icon to open the dashboard</p>
+</div>
+<button id="dock" aria-label="Show launcher screen" title="Back to launcher"><img alt="" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22 role=%22img%22 aria-label=%22Delhi pollution dashboard%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2316364f%22/%3E%3Cstop offset=%221%22 stop-color=%22%230b1c2c%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22heat%22 cx=%2250%25%22 cy=%2250%25%22 r=%2250%25%22%3E%3Cstop offset=%220%22 stop-color=%22%23ffd166%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23ef6f3c%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23d1495b%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d1495b%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3CclipPath id=%22r%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22112%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path=%22url%28%23r%29%22%3E%3Crect width=%22512%22 height=%22512%22 fill=%22url%28%23bg%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%22190%22 fill=%22url%28%23heat%29%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2262%22 fill=%22none%22 stroke=%22%23ffe3a3%22 stroke-opacity=%22.55%22 stroke-width=%226%22/%3E%3Ccircle cx=%22330%22 cy=%22188%22 r=%2222%22 fill=%22%23fff6dc%22/%3E%3Cg fill=%22%23e8f1f7%22%3E%3Crect x=%2282%22 y=%22300%22 width=%2252%22 height=%2296%22 rx=%2212%22 opacity=%22.55%22/%3E%3Crect x=%22156%22 y=%22258%22 width=%2252%22 height=%22138%22 rx=%2212%22 opacity=%22.75%22/%3E%3Crect x=%22230%22 y=%22212%22 width=%2252%22 height=%22184%22 rx=%2212%22/%3E%3C/g%3E%3Cpath d=%22M-10 430 C 70 396, 120 460, 200 428 S 330 392, 400 430 S 480 452, 530 424 V 540 H -10 Z%22 fill=%22%232aa7c9%22/%3E%3Cpath d=%22M-10 462 C 80 430, 130 492, 210 460 S 340 428, 410 464 S 490 484, 530 458 V 540 H -10 Z%22 fill=%22%231c7ea1%22/%3E%3C/g%3E%3C/svg%3E"></button>
+
+<header>
+  <h1>Delhi air &amp; water pollution — scenarios year by year, 2010 → 2030</h1>
+  <p class="sub">Relative-risk model (hazard × vulnerability) applied to every year, using official/CPCB data where retrieved. Drag the year, switch scenarios, change assumptions.</p>
+</header>
+<main>
+
+<section class="card">
+  <div class="controls">
+    <div><label>Metric on the main chart</label><select id="metric"></select></div>
+    <div><label>Year: <b id="yearLbl">2025</b></label>
+      <div class="row"><input type="range" id="year" min="2010" max="2030" step="1" value="2025"><button id="play" style="width:70px">▶ Play</button></div></div>
+    <div><label>PM2.5 data series</label>
+      <select id="pmSeries"><option value="blend">Official PIB 2018–25 + CPCB-repository review 2010–17</option><option value="review">CPCB-repository review 2010–22 (+PIB 2023–25)</option></select></div>
+    <div><label>Custom scenario: PM2.5 cut <b id="cutLbl">30%</b></label><input type="range" id="cut" min="0" max="80" value="30"></div>
+    <div><label>Custom scenario: sewage treated to standard <b id="compLbl">85%</b> (2025: 56%)</label><input type="range" id="comp" min="56" max="100" value="85"></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</section>
+
+<section class="card">
+  <h2 id="mainTitle"></h2>
+  <canvas id="main"></canvas>
+  <div class="legend"><span class="f">filled = observed / reported</span><span>hollow = interpolated, held or projected</span><span>dashed segment = 2026 (year to date, projected)</span><span>PM2.5 chart: whisker = 2026 Jan–Oct regression interval; shaded band 2026–2030 = trend-model 95% forecast band (dashed line = central forecast)</span></div>
+  <p class="sub" id="hint" style="font-size:12.5px;margin-top:6px"></p>
+  <p class="narr" id="narr"></p>
+</section>
+
+<section class="card">
+  <h2>Selected year at a glance <span class="tag" id="kpiScenTag"></span></h2>
+  <div class="kpis" id="kpis"></div>
+</section>
+
+<section class="card">
+  <div class="row" style="align-items:end;flex-wrap:wrap;gap:12px">
+    <div style="flex:1;min-width:230px"><h2 style="margin:0">Delhi hotspot sketch — <span id="mapCtx"></span></h2><p class="sub" style="font-size:12.5px;margin:2px 0 0">Follows the year slider. Schematic outline, not survey-accurate.</p></div>
+    <div style="width:240px"><label>Map layer</label><select id="mapLayer"></select></div>
+    <div style="width:240px"><label>Scenario</label><select id="mapScen"></select></div>
+  </div>
+  <div class="mapgrid">
+    <div><canvas id="map"></canvas></div>
+    <div>
+      <h2>Top hotspots <span class="tag">district names approximate</span></h2>
+      <ol id="hotlist"></ol>
+      <div class="mstat" id="mapStats"></div>
+      <div class="checks">
+        <label><input type="checkbox" id="mf_hot" checked>Outline hotspots</label>
+        <label><input type="checkbox" id="mf_stn" checked>Monitoring stations</label>
+        <label><input type="checkbox" id="mf_wat" checked>Yamuna &amp; drains</label>
+        <label><input type="checkbox" id="mf_src" checked>Landfills &amp; industry</label>
+        <label><input type="checkbox" id="mf_lab" checked>Labels</label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card"><h2>Inputs: Delhi annual PM2.5 (µg/m³)</h2><canvas id="pmChart" class="small"></canvas></div>
+  <div class="card"><h2>Inputs: Yamuna downstream BOD (mg/L; standard = 3)</h2><canvas id="bodChart" class="small"></canvas></div>
+</section>
+
+<section class="card">
+  <div class="row" style="align-items:end;flex-wrap:wrap;gap:12px">
+    <div style="flex:1;min-width:230px"><h2 style="margin:0">Who bears it: district risk in <span id="dYear"></span></h2></div>
+    <div style="width:260px"><label>District view scenario</label><select id="dScen"></select></div>
+    <div style="width:170px"><button id="csv">⬇ Export all years (CSV)</button></div>
+  </div>
+  <canvas id="dbar"></canvas>
+  <div class="scroll"><table id="dtab"></table></div>
+  <p class="sub" style="margin-top:6px">RRI = risk relative to the whole-city 2025 observed average (1.00). Population, deaths, RRI and “P(top-3)” follow the selected year (P(top-3) = share of 1,000 random draws of weights, district PM2.5 pattern and water hazard in which the district is in the top three; it is recomputed in the browser for each year and scenario).</p>
+</section>
+
+<section class="card">
+  <h2>Advanced assumptions</h2>
+  <div class="controls">
+    <div><label>Share of 2001–11 district growth trend continued after 2011: <b id="gLbl">0.60</b> (0 = frozen at Census 2011)</label><input type="range" id="g" min="0" max="1" step="0.05" value="0.6"></div>
+    <div><label>Crude death rate: <b id="cdrLbl">4.5</b> per 1,000 (SRS 2023, held constant)</label><input type="range" id="cdr" min="3.5" max="6" step="0.1" value="4.5"></div>
+    <div><label>Weight of air in hazard: <b id="waLbl">0.60</b></label><input type="range" id="wa" min="0.3" max="0.9" step="0.05" value="0.6"></div>
+    <div><label>Weight of children in vulnerability: <b id="wcLbl">0.50</b></label><input type="range" id="wc" min="0.1" max="0.9" step="0.05" value="0.5"></div>
+    <div><label>Extra susceptibility, children &amp; informal housing: <b id="suLbl">1.00</b>×</label><input type="range" id="su" min="1" max="1.5" step="0.05" value="1"></div>
+    <div><label>Weight of landfills &amp; industry in the map: <b id="wsLbl">0.15</b> (map only)</label><input type="range" id="ws" min="0" max="0.5" step="0.05" value="0.15"></div>
+  </div>
+</section>
+
+<section class="note"><b>Read this before quoting numbers.</b> This is a relative-risk screening model, not a forecast or an official health estimate. Water pollution is represented by Yamuna BOD only (the one parameter with multi-year anchors); the 2010–2013 water values are <i>held</i> at the 2014 estimate and 2026 at 2025 because no annual data were retrieved. District air pattern and vulnerability are fixed at their 2025 / Census-2011 values for all years. The district informal-housing share is an illiteracy-based proxy. Full list below.</section>
+
+<section class="card">
+  <details open><summary>Data, derivations and gaps</summary>
+  <ul id="notes"></ul></details>
+  <details style="margin-top:10px"><summary>Sources</summary>
+  <ul>
+   <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2210935&reg=48&lang=2">PIB — Delhi PM10/PM2.5 2018–2025 (CPCB data)</a></li>
+   <li><a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2331032&reg=48&lang=2">PIB — Delhi October 2026 AQI; Jan–29 Oct PM2.5 by year</a></li>
+   <li><a href="https://urbanemissions.info/wp-content/uploads/docs/2023-02-MDPI-Sus-DelhiAQ-Review.pdf">Delhi air quality review (CPCB repository annual PM2.5, 2010–2022)</a></li>
+   <li><a href="https://www.outlookindia.com/national/significant-increase-in-yamuna-pollution-since-2017-finds-delhi-govt-report-news-239524">Outlook — DPCC report on Yamuna BOD 2017 vs 2022</a></li>
+   <li><a href="https://www.business-standard.com/article/current-affairs/yamuna-s-pollution-doubled-in-8-years-of-kejriwal-govt-guv-office-123011601295_1.html">Business Standard — Yamuna BOD 2014 / 2017 / 2023, sewage</a></li>
+   <li><a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2150744">PIB — CPCB NWMP Yamuna data Jan–Jun 2025; sewage and STP capacity</a></li>
+   <li><a href="https://www.business-standard.com/article/pti-stories/60-per-cent-of-sewage-remains-untreated-in-delhi-115032200055_1.html">Business Standard — 2015 sewage generated/treated</a></li>
+   <li><a href="https://theprint.in/feature/sewage-treatment-plants-delhi-economic-survey-yamuna/2886646">ThePrint — Economic Survey 2025-26 on STPs</a></li>
+   <li><a href="https://census2011.co.in/census/state/districtlist/delhi.html">Census 2011 district table</a> · <a href="https://news.ki.se/indias-high-air-pollution-counts-for-a-large-share-of-deaths">Lancet Planetary Health 2024 (exposure–response)</a> · <a href="https://visionias.in/current-affairs/news-today/2025-09-05/society/sample-registration-system-srs-statistical-report-2023-released">SRS 2023 (Delhi death rate 4.5)</a></li>
+  </ul></details>
+</section>
+</main>
+<div id="tip"></div>
+
+<script>
+/*CORE_START*/
+const YEARS = Array.from({length:21},(_,i)=>2010+i);   // 2010-2025 observed/derived, 2026-2030 regression forecasts
+const BETA = Math.log(1.0142)/10, C0 = 15, NAAQS = 40;
+
+// dec = Census decadal growth 2001-11 (census2011.co.in); Census 2011 (pop, literacy, 0-6 children); pat = district PM2.5 / city mean from the 2025 station-anchored model; p3 = P(top-3) in 2025 Monte Carlo
+const DIS = [
+ {n:'North West', pop:3656539, dec:0.2781, lit:84.45, child:443195, pat:1.11086, p3:1.00},
+ {n:'South',      pop:2731929, dec:0.2051, lit:86.57, child:323266, pat:0.92999, p3:0.34},
+ {n:'West',       pop:2543243, dec:0.1946, lit:86.98, child:282678, pat:1.02083, p3:0.23},
+ {n:'South West', pop:2292958, dec:0.3065, lit:88.28, child:262815, pat:0.92999, p3:0.08},
+ {n:'North East', pop:2241624, dec:0.2678, lit:83.09, child:296224, pat:0.92999, p3:0.95},
+ {n:'East',       pop:1709346, dec:0.1679, lit:89.31, child:189519, pat:1.09549, p3:0.05},
+ {n:'North',      pop:887978, dec:0.1362,  lit:86.85, child:100879, pat:0.92999, p3:0.00},
+ {n:'Central',    pop:582320, dec:-0.0991,  lit:85.14, child:60385,  pat:0.92999, p3:0.34},
+ {n:'New Delhi',  pop:142004, dec:-0.2072,  lit:88.34, child:11549,  pat:0.92999, p3:0.00},
+];
+const WB_DOWN = 0.772525, WB_UP = 0.024444;           // 2025 Yamuna hazard index: downstream stations / Palla (python model)
+const WB = DIS.map(d => d.n==='North' ? 0.5*(WB_UP+WB_DOWN) : WB_DOWN);
+const NC_BASE = 1 - 2014/3596;                          // 2025 non-compliant sewage share (PIB 2150744)
+
+// ---- PM2.5 annual averages (ug/m3)
+const PIB = {2018:114,2019:109,2020:95,2021:105,2022:98,2023:100,2024:105,2025:97};          // PIB 2210935
+const REV = {2010:144.1,2011:140.1,2012:140.3,2013:125.3,2014:117.2,2015:125.3,2016:133.3,2017:117.2,2018:120.0,2019:105.0,2020:93.0,2021:106.0,2022:99.7}; // CPCB repository, review
+const YTD = {2018:93,2019:88,2020:71,2021:82,2022:81,2023:76,2024:83,2025:72,2026:69};      // Jan-29 Oct mean, PIB 2331032
+const ratios = Object.keys(PIB).map(y => PIB[y]/YTD[y]);
+const RATIO_MEAN = ratios.reduce((a,b)=>a+b,0)/ratios.length;
+// 2026 full year: OLS of full-year mean on Jan-29 Oct mean (2018-25, n=8) with 95% prediction interval (t, 6 df)
+const REG=(()=>{ const ys=Object.keys(PIB).map(Number), n=ys.length, xs=ys.map(y=>YTD[y]), ts=ys.map(y=>PIB[y]);
+  const mx=xs.reduce((a,b)=>a+b)/n, my=ts.reduce((a,b)=>a+b)/n;
+  const sxx=xs.reduce((a,x)=>a+(x-mx)**2,0), b=xs.reduce((a,x,i)=>a+(x-mx)*(ts[i]-my),0)/sxx, a0=my-b*mx;
+  const sse=xs.reduce((a,x,i)=>a+(ts[i]-a0-b*x)**2,0), se=Math.sqrt(sse/(n-2)), x0=YTD[2026];
+  const half=2.447*se*Math.sqrt(1+1/n+(x0-mx)**2/sxx); return {a0,b,se,half,mu:a0+b*x0}; })();
+const FC = [[2026,93.4,80.53,107.24],[2027,90.99,78.43,105.10],[2028,88.66,75.46,102.03],[2029,86.38,73.32,100.83],[2030,84.16,71.02,98.17]].map(r=>({y:r[0],pt:r[1],lo:r[2],hi:r[3]})); // trend model forecast, delhi_vulnerability_regression.py
+const PM2026 = REG.mu, PM2026_LO = REG.mu-REG.half, PM2026_HI = REG.mu+REG.half;
+function pmSeries(mode, band){
+  return YEARS.map(y=>{
+    if(y===2026) return {y, v:band==='lo'?PM2026_LO:band==='hi'?PM2026_HI:PM2026, kind:'proj'};
+    if(y>2026){ const f=FC.find(r=>r.y===y); return {y, v:band==='lo'?f.lo:band==='hi'?f.hi:f.pt, kind:'fc'}; }
+    if(mode==='review' && REV[y]!==undefined) return {y, v:REV[y], kind:'cpcb'};
+    if(PIB[y]!==undefined) return {y, v:PIB[y], kind:'pib'};
+    return {y, v:REV[y], kind:'cpcb'};
+  });
+}
+// ---- Yamuna downstream BOD (mg/L)
+const mean = a => a.reduce((x,y)=>x+y,0)/a.length;
+const BOD_ANCH = {
+  2017: mean([23,26,30]),                                   // Nizamuddin, Okhla, Asgarpur (DPCC via Outlook)
+  2022: mean([60,69,73]),
+  2025: mean([mean([39,52,48,38,37,40]), mean([50,39,50,46,23,30]), mean([64,72,70,56,38,44])]), // NWMP Jan-Jun 2025
+};
+// 2021 (Delhi Economic Survey, DPCC data): Okhla downstream 54.44, Asgarpur 58; Nizamuddin not stated -> DERIVED as 0.87 x Okhla, the mean Nizamuddin/Okhla ratio in 2017, 2022 and 2025
+const NZ_RATIO = mean([23/26, 60/69, mean([39,52,48,38,37,40])/mean([50,39,50,46,23,30])]);
+BOD_ANCH[2021] = mean([NZ_RATIO*54.44, 54.44, 58]);
+BOD_ANCH[2014] = BOD_ANCH[2017]*(32/26);                    // Okhla 2014 = 32 (BS) vs 2017 = 26 (Outlook): ratio applied (DERIVED)
+// OLS trend through the five BOD anchors (2014 and 2021 derived, 2017, 2022, 2025) with a 95% prediction interval (t, 3 df = 3.182).
+// Only 4 points: the interval is very wide and the slope is not statistically distinguishable from zero - shown on purpose.
+const BREG=(()=>{ const xs=[2014,2017,2021,2022,2025], ys=xs.map(k=>BOD_ANCH[k]), n=5, mx=mean(xs), my=mean(ys);
+  const sxx=xs.reduce((a,x)=>a+(x-mx)**2,0), b=xs.reduce((a,x,i)=>a+(x-mx)*(ys[i]-my),0)/sxx, a0=my-b*mx;
+  const se=Math.sqrt(xs.reduce((a,x,i)=>a+(ys[i]-a0-b*x)**2,0)/(n-2));
+  const at=(t,k)=>{ const m=a0+b*t, h=3.182*se*Math.sqrt(1+1/n+(t-mx)**2/sxx); return Math.min(100, Math.max(0.5, k==='lo'?m-h:k==='hi'?m+h:m)); };
+  return {a0,b,se,at}; })();
+function bodSeries(band){
+  const ks=[2014,2017,2021,2022,2025];
+  return YEARS.map(y=>{
+    if(BOD_ANCH[y]!==undefined) return {y, v:BOD_ANCH[y], kind: (y===2014||y===2021)?'derived':'anchor'};
+    if(y<2014) return {y, v:BOD_ANCH[2014], kind:'hold'};
+    if(y>2025) return {y, v:BREG.at(y,band), kind:'fc'};
+    let a=ks.filter(k=>k<y).pop(), b=ks.find(k=>k>y);
+    return {y, v:BOD_ANCH[a]+(BOD_ANCH[b]-BOD_ANCH[a])*(y-a)/(b-a), kind:'interp'};
+  });
+}
+
+// ---- scenarios
+const SCEN = [
+ {id:'obs',  name:'Observed (as measured)', color:'#d1495b', pmCut:0,   naaqs:false, nc:null},
+ {id:'pm20', name:'PM2.5 −20%',             color:'#edae49', pmCut:.2,  naaqs:false, nc:null},
+ {id:'pm40', name:'PM2.5 −40%',             color:'#00a6a6', pmCut:.4,  naaqs:false, nc:null},
+ {id:'naaqs',name:'PM2.5 to national standard (40)', color:'#30638e', pmCut:0, naaqs:true, nc:null},
+ {id:'stp',  name:'Fix 14 non-compliant STPs (82% treated to norm)', color:'#6a994e', pmCut:0, naaqs:false, nc:1-2955/3596},
+ {id:'stpf', name:'All sewage treated to norm',   color:'#8d6a9f', pmCut:0, naaqs:false, nc:0},
+ {id:'both', name:'PM2.5 −40% + all sewage treated', color:'#7b2cbf', pmCut:.4, naaqs:false, nc:0},
+ {id:'cust', name:'Custom (sliders)',        color:'#e07a5f', pmCut:0.3, naaqs:false, nc:0.15},
+];
+
+// ---- model
+function makeModel(P){
+  const tot = DIS.reduce((s,d)=>s+d.pop,0), share = DIS.map(d=>d.pop/tot);   // Census-2011 shares (vulnerability weights)
+  // District population by year: Census 2011 x district-specific 2001-11 growth trend; after 2011 only the fraction P.g of that trend continues (slowing growth); back-cast to 2010 at full trend.
+  const gr = DIS.map(d=>Math.pow(1+d.dec,0.1)-1);
+  const popOf = (i,t)=>DIS[i].pop*Math.pow(1+gr[i]*(t>2011?P.g:1), t-2011);
+  const shareAt = t=>{ const p=DIS.map((d,i)=>popOf(i,t)), s=p.reduce((a,b)=>a+b,0); return p.map(x=>x/s); };
+  const sh25 = shareAt(2025);
+  const totChild = DIS.reduce((s,d)=>s+d.child,0);
+  const ill = DIS.map(d=>100-d.lit), meanIll = DIS.reduce((s,d,i)=>s+share[i]*ill[i],0);
+  const V = DIS.map((d,i)=>{
+    const childRel = (d.child/d.pop)/(totChild/tot), infRel = ill[i]/meanIll;
+    return P.wc*childRel*P.su + (1-P.wc)*infRel*P.su;
+  });
+  const af = c => 1-Math.exp(-BETA*Math.max(c-C0,0));
+  const pm = pmSeries(P.series, P.band), bod = bodSeries();
+  const WM = DIS.reduce((s,d,i)=>s+sh25[i]*WB[i],0);
+  const afOf = (t,sc)=>{
+    const city = pm[t-2010].v;
+    let f = 1-sc.pmCut; if(sc.naaqs) f = Math.min(1, NAAQS/city);
+    return DIS.map(d=>af(city*d.pat*f));
+  };
+  // reference: 2025 observed
+  const sc0 = SCEN[0], af25 = afOf(2025,sc0), AFM = DIS.reduce((s,d,i)=>s+sh25[i]*af25[i],0);
+  const H25 = DIS.map((d,i)=>P.wa*af25[i]/AFM+(1-P.wa)*(WB[i]/WM));
+  const RM = DIS.reduce((s,d,i)=>s+sh25[i]*H25[i]*V[i],0);
+  const BOD25 = BOD_ANCH[2025];
+  function run(t, sc){
+    const city = pm[t-2010].v;
+    const a = afOf(t,sc);
+    const ncRatio = sc.nc===null ? 1 : sc.nc/NC_BASE;
+    const widx = (bod[t-2010].v/BOD25)*ncRatio;
+    const sht = shareAt(t);
+    const d = DIS.map((x,i)=>{
+      const pop = popOf(i,t), pmv = pm[t-2010].v*x.pat*(sc.naaqs?Math.min(1,NAAQS/city):1-sc.pmCut);
+      const W = (WB[i]/WM)*widx;
+      const H = P.wa*a[i]/AFM+(1-P.wa)*W;
+      const rri = H*V[i]/RM;
+      const deaths = pop*P.cdr/1000*a[i];
+      return {n:x.n, pop, pm:pmv, af:a[i], deaths, per100k:deaths/pop*1e5, W, V:V[i], rri};
+    });
+    const popAll = d.reduce((s,x)=>s+x.pop,0), deaths = d.reduce((s,x)=>s+x.deaths,0);
+    const city_ = {
+      pm: d.reduce((s,x)=>s+x.pm*x.pop,0)/popAll,
+      deaths, per100k: deaths/popAll*1e5,
+      risk: d.reduce((s,x,i)=>s+sht[i]*x.rri,0),
+      water: widx,
+      childPm: d.reduce((s,x,i)=>s+x.pm*DIS[i].child,0)/totChild,
+      top: Math.max(...d.map(x=>x.rri)),
+      topName: d.slice().sort((p,q)=>q.rri-p.rri)[0].n,
+      top3DeathShare: d.slice().sort((p,q)=>q.rri-p.rri).slice(0,3).reduce((s,x)=>s+x.deaths,0)/deaths,
+      top3PopShare: d.slice().sort((p,q)=>q.rri-p.rri).slice(0,3).reduce((s,x)=>s+x.pop,0)/popAll,
+    };
+    return {t, d, city:city_, pmCity:pm[t-2010].v, f:(sc.naaqs?Math.min(1,NAAQS/pm[t-2010].v):1-sc.pmCut), bodV:bod[t-2010].v, pmK:pm[t-2010].kind, bodK:bod[t-2010].kind};
+  }
+  return {run, pm, bod, V, share};
+}
+/*CORE_END*/
+
+/*MAP_START*/
+const KX=Math.cos(28.65*Math.PI/180), KM=111;
+const GEO={lon0:76.835,lon1:77.355,lat0:28.395,lat1:28.88};
+// simplified, hand-drawn NCT Delhi outline [lon,lat] (schematic)
+const OUT=[[77.030,28.835],[77.080,28.872],[77.150,28.866],[77.210,28.835],[77.232,28.800],[77.260,28.765],[77.305,28.745],[77.345,28.705],[77.348,28.650],[77.342,28.600],[77.338,28.555],[77.336,28.520],[77.336,28.480],[77.300,28.450],[77.255,28.418],[77.190,28.405],[77.130,28.425],[77.085,28.455],[77.030,28.475],[76.960,28.490],[76.890,28.520],[76.850,28.568],[76.850,28.620],[76.880,28.665],[76.945,28.700],[76.985,28.750],[77.000,28.805]];
+// name, lon, lat, annual PM2.5 (mid-point of reported range; CSE/CPCB analyses). Coordinates approximate.
+const STN=[['Jahangirpuri',77.170,28.733,124.5],['Bawana',77.051,28.776,113],['Wazirpur',77.165,28.699,113],['Rohini',77.118,28.732,102],['Ashok Vihar',77.181,28.695,102],['Mundka',77.030,28.682,102],['Anand Vihar',77.316,28.647,123.5]];
+// approximate positions, general knowledge (not an official dataset retrieved here)
+const LAND=[['Bhalswa landfill',77.1575,28.7385],['Ghazipur landfill',77.326,28.6245],['Okhla landfill',77.2745,28.5115]];
+const IND=[['Bawana industrial area',77.040,28.790],['Narela industrial area',77.095,28.845],['Mundka industrial area',77.030,28.680],['Wazirpur industrial area',77.165,28.690],['Mayapuri industrial area',77.120,28.630],['Okhla industrial area',77.280,28.530]];
+// Yamuna through Delhi: lon, lat, name, BOD severity = 2025 NWMP mean BOD / Asgarpur mean (null = interpolated by chainage)
+const RIV=[[77.2100,28.8138,'Palla',4.4/57.3],[77.2319,28.7131,'Wazirabad',null],[77.2338,28.6714,'ISBT',null],[77.2535,28.6284,'ITO',null],[77.2600,28.5916,'Nizamuddin',42.3/57.3],[77.3111,28.5454,'Okhla barrage',39.7/57.3],[77.3250,28.5200,'Asgarpur',1],[77.3310,28.4950,'Delhi exit',1]];
+const NAJ=[[76.98,28.61],[77.02,28.635],[77.07,28.66],[77.12,28.70],[77.17,28.715],[77.215,28.718],[77.232,28.713]];   // Najafgarh drain, approximate course
+const DSEED={'North West':[77.08,28.74],'North':[77.21,28.69],'North East':[77.27,28.70],'East':[77.30,28.63],'New Delhi':[77.21,28.60],'Central':[77.23,28.65],'West':[77.08,28.65],'South West':[76.97,28.58],'South':[77.22,28.52]};
+const DRAIN_SEV=0.8;
+const kmX=lon=>lon*KM*KX, kmY=lat=>lat*KM;
+function inPoly(x,y,p){ let c=false; for(let i=0,j=p.length-1;i<p.length;j=i++){ const xi=p[i][0],yi=p[i][1],xj=p[j][0],yj=p[j][1]; if((yi>y)!==(yj>y) && x<(xj-xi)*(y-yi)/(yj-yi)+xi) c=!c; } return c; }
+function segD(px,py,ax,ay,bx,by){ const dx=bx-ax, dy=by-ay, L2=dx*dx+dy*dy; let t=L2?((px-ax)*dx+(py-ay)*dy)/L2:0; t=Math.max(0,Math.min(1,t)); return {d:Math.hypot(px-(ax+t*dx),py-(ay+t*dy)), t}; }
+const afp=c=>1-Math.exp(-BETA*Math.max(c-C0,0));
+
+const GRID=(function(){
+  const dlon=0.0072, dlat=0.0063;
+  const nx=Math.ceil((GEO.lon1-GEO.lon0)/dlon), ny=Math.ceil((GEO.lat1-GEO.lat0)/dlat);
+  const meas=RIV.map(p=>p[3]);
+  const rk=RIV.map(p=>({x:kmX(p[0]),y:kmY(p[1]),q:p[3]}));
+  const cum=[0]; for(let i=1;i<rk.length;i++) cum.push(cum[i-1]+Math.hypot(rk[i].x-rk[i-1].x,rk[i].y-rk[i-1].y));
+  rk.forEach((p,i)=>{ if(meas[i]===null){ let a=i-1; while(meas[a]===null) a--; let b=i+1; while(meas[b]===null) b++; p.q=meas[a]+(meas[b]-meas[a])*(cum[i]-cum[a])/(cum[b]-cum[a]); } });
+  const naj=NAJ.map(p=>[kmX(p[0]),kmY(p[1])]);
+  const seeds=Object.entries(DSEED).map(([n,p])=>({x:kmX(p[0]),y:kmY(p[1]),di:DIS.findIndex(d=>d.n===n)}));
+  const stn=STN.map(s=>({x:kmX(s[1]),y:kmY(s[2]),rel:s[3]/96}));
+  const src=[...LAND.map(p=>({x:kmX(p[1]),y:kmY(p[2]),w:1})),...IND.map(p=>({x:kmX(p[1]),y:kmY(p[2]),w:0.7}))];
+  const at=new Int32Array(nx*ny).fill(-1), cells=[];
+  for(let iy=0;iy<ny;iy++) for(let ix=0;ix<nx;ix++){
+    const lon=GEO.lon0+(ix+.5)*dlon, lat=GEO.lat1-(iy+.5)*dlat;
+    if(!inPoly(lon,lat,OUT)) continue;
+    const x=kmX(lon), y=kmY(lat);
+    let wS=0.35, sum=0.35*0.93;
+    stn.forEach(s=>{ const w=Math.exp(-((x-s.x)**2+(y-s.y)**2)/18); wS+=w; sum+=w*s.rel; });
+    const rel=sum/wS;
+    let wat=0;
+    for(let k=0;k<rk.length-1;k++){ const r=segD(x,y,rk[k].x,rk[k].y,rk[k+1].x,rk[k+1].y); wat=Math.max(wat,(rk[k].q+(rk[k+1].q-rk[k].q)*r.t)*Math.exp(-r.d/1.2)); }
+    [naj].forEach(pl=>{ for(let k=0;k<pl.length-1;k++){ wat=Math.max(wat,DRAIN_SEV*Math.exp(-segD(x,y,pl[k][0],pl[k][1],pl[k+1][0],pl[k+1][1]).d/1.0)); } });
+    let S=0; src.forEach(s=>{ S+=s.w*Math.exp(-((x-s.x)**2+(y-s.y)**2)/12.5); });
+    let best=1e9, di=0; seeds.forEach(sd=>{ const d=Math.hypot(x-sd.x,y-sd.y); if(d<best){best=d;di=sd.di;} });
+    at[iy*nx+ix]=cells.length; cells.push({ix,iy,lon,lat,x,y,rel,wat,src:S,di});
+  }
+  return {nx,ny,dlon,dlat,cells,at,cellKm2:dlon*KM*KX*dlat*KM};
+})();
+
+let MREF=null;
+function mapTerms(c,cityRaw,f,widx){ const pm=c.rel*cityRaw*f; return {pm, af:afp(pm), W:c.wat*widx, S:c.src, V:M.V[c.di]}; }
+const cmp=x=>Math.log2(1+x);   // diminishing returns: 0->0, 1->1, 5->2.6; keeps scenario changes visible
+function mapH(t,ref){ return (1-P.ws)*(P.wa*t.af/ref.AFm+(1-P.wa)*cmp(t.W/ref.Wm))+P.ws*cmp(t.S/ref.Sm); }
+function mapRefBuild(){
+  const rr=R.obs[2025-2010], cells=GRID.cells, n=cells.length;
+  const tms=cells.map(c=>mapTerms(c,rr.pmCity,rr.f,rr.city.water));
+  // each factor is scaled to its own 2025 top-10% level (p90), so a narrow river corridor does not swamp air
+  const p90=a=>a.slice().sort((x,y)=>x-y)[Math.floor(.9*(n-1))]||1e-9;
+  const ref={AFm:p90(tms.map(t=>t.af)),Wm:p90(tms.map(t=>t.W)),Sm:p90(tms.map(t=>t.S)),Ref:1};
+  let tot=0; const raw=tms.map(t=>{ const v=t.V*mapH(t,ref); tot+=v; return v; });
+  ref.Ref=tot/n;
+  const sorted=raw.map(v=>v/ref.Ref).sort((x,y)=>x-y);
+  ref.thr=sorted[Math.floor(.9*(n-1))]; ref.dom=sorted[Math.floor(.99*(n-1))];
+  return ref;
+}
+function mapCompute(t,scId){
+  if(!MREF) MREF=mapRefBuild();
+  const ref=MREF, rr=R[scId][t-2010];
+  return GRID.cells.map(c=>{ const tm=mapTerms(c,rr.pmCity,rr.f,rr.city.water);
+    tm.score=tm.V*mapH(tm,ref)/ref.Ref; tm.Wn=tm.W/ref.Wm; tm.Sn=tm.S/ref.Sm;
+    tm.tAir=(1-P.ws)*P.wa*tm.af/ref.AFm; tm.tWat=(1-P.ws)*(1-P.wa)*cmp(tm.Wn); tm.tSrc=P.ws*cmp(tm.Sn); return tm; });
+}
+function driverOf(tm){ const m=Math.max(tm.tAir,tm.tWat,tm.tSrc); return m===tm.tAir?'air pollution':(m===tm.tWat?'Yamuna / drain water':'landfill / industry'); }
+const MLAYERS={
+  comp:{label:'Combined hotspot index (all factors)',val:t=>t.score,dom:ref=>[0,ref.dom],fmt:v=>v.toFixed(1),unit:'index, 2025 area-average = 1'},
+  air:{label:'Air: PM2.5 (µg/m³)',val:t=>t.pm,dom:()=>[40,160],fmt:v=>v.toFixed(0),unit:'µg/m³'},
+  water:{label:'Water: Yamuna & drain hazard',val:t=>t.Wn,dom:()=>[0,1.5],fmt:v=>v.toFixed(1),unit:'index, 2025 top-10% cell = 1'},
+  vul:{label:'Vulnerability: children + informal housing',val:t=>t.V,dom:()=>[0.5,1.4],fmt:v=>v.toFixed(2),unit:'relative to city'},
+  src:{label:'Local sources: landfills & industry',val:t=>t.Sn,dom:()=>[0,1.5],fmt:v=>v.toFixed(1),unit:'index, 2025 top-10% cell = 1'},
+};
+const RAMP=[[255,247,214],[253,213,126],[245,138,60],[209,52,43],[107,15,26]];
+function ramp(u){ u=Math.max(0,Math.min(1,u)); const p=u*(RAMP.length-1), i=Math.min(RAMP.length-2,Math.floor(p)), f=p-i, a=RAMP[i], b=RAMP[i+1];
+  return `rgb(${Math.round(a[0]+(b[0]-a[0])*f)},${Math.round(a[1]+(b[1]-a[1])*f)},${Math.round(a[2]+(b[2]-a[2])*f)})`; }
+const FEATS=[...STN.map(p=>[p[0]+' station',p[1],p[2]]),...LAND.map(p=>[p[0],p[1],p[2]]),...IND.map(p=>[p[0],p[1],p[2]]),['Okhla barrage (Yamuna)',77.3111,28.5454],['Najafgarh drain outfall',77.232,28.713],['Asgarpur (Yamuna)',77.325,28.52]];
+/*MAP_END*/
+
+// ---------- UI ----------
+const $ = id => document.getElementById(id);
+const P = {series:'blend', g:.6, cdr:4.5, wa:.6, wc:.5, su:1, cut:.3, comp:.85, ws:.15};
+const state = {year:2025, active:new Set(['obs','pm40','stp','both','cust']), dScen:'obs', metric:'risk', mapLayer:'comp'};
+const METRICS = {
+  risk:{label:'Citywide risk index (2025 observed = 1.00)', f:r=>r.city.risk, fmt:v=>v.toFixed(2)},
+  per100k:{label:'PM2.5-attributable deaths per 100,000 people', f:(r)=>r.city.per100k, fmt:v=>v.toFixed(1)},
+  deaths:{label:'PM2.5-attributable deaths per year (population base per assumptions)', f:r=>r.city.deaths, fmt:v=>Math.round(v).toLocaleString('en-IN')},
+  avoided:{label:'Avoided PM2.5-attributable deaths vs observed', f:(r,o)=>o.city.deaths-r.city.deaths, fmt:v=>Math.round(v).toLocaleString('en-IN')},
+  pm:{label:'Delhi mean PM2.5 (µg/m³)', f:r=>r.city.pm, fmt:v=>v.toFixed(1)},
+  water:{label:'Yamuna water hazard index (2025 observed = 1.00)', f:r=>r.city.water, fmt:v=>v.toFixed(2)},
+  top:{label:'Highest district RRI (city 2025 = 1.00)', f:r=>r.city.top, fmt:v=>v.toFixed(2)},
+};
+let RB; let M, R; // model + results[scenId][yearIdx]
+
+function scenList(){ // apply custom sliders
+  SCEN[SCEN.length-1].pmCut = P.cut;
+  SCEN[SCEN.length-1].nc = 1-P.comp;
+  return SCEN;
+}
+function recompute(){
+  M = makeModel(P); R = {}; MREF = null;
+  scenList().forEach(s=>{ R[s.id]=YEARS.map(t=>M.run(t,s)); });
+  const Mlo=makeModel({...P,band:'lo'}), Mhi=makeModel({...P,band:'hi'}); RB={lo:YEARS.map(t=>Mlo.run(t,SCEN[0])), hi:YEARS.map(t=>Mhi.run(t,SCEN[0]))};
+  draw();
+}
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function setupCanvas(c){
+  const r=c.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
+  c.width=Math.round(r.width*dpr); c.height=Math.round(r.height*dpr);
+  const g=c.getContext('2d'); g.setTransform(dpr,0,0,dpr,0,0); return {g,w:r.width,h:r.height};
+}
+function niceMax(v){ if(v<=0) return 1; const p=Math.pow(10,Math.floor(Math.log10(v))); const m=v/p; return (m<=1?1:m<=2?2:m<=2.5?2.5:m<=5?5:10)*p; }
+function lineChart(c, o){
+  const {g,w,h}=setupCanvas(c); const ink=cssv('--ink'), mute=cssv('--mute'), grid=cssv('--grid');
+  const L=52,Rr=14,T=12,B=26, pw=w-L-Rr, ph=h-T-B;
+  let ymax=0, ymin=o.zero===false?Infinity:0;
+  o.series.forEach(s=>s.pts.forEach(p=>{ymax=Math.max(ymax,p.y); if(o.zero===false) ymin=Math.min(ymin,p.y);}));
+  if(o.zero===false){ const pad=(ymax-ymin)*.1||1; ymin=Math.max(0,ymin-pad); ymax=ymax+pad; } else { ymax=niceMax(ymax*1.06); }
+  if(ymax===ymin) ymax=ymin+1;
+  const XM=o.xmax||2026, X=x=>L+(x-2010)/(XM-2010)*pw, Y=y=>T+ph-(y-ymin)/(ymax-ymin)*ph;
+  g.font='11px system-ui'; g.fillStyle=mute; g.strokeStyle=grid; g.lineWidth=1; g.textAlign='right'; g.textBaseline='middle';
+  for(let i=0;i<=5;i++){ const v=ymin+(ymax-ymin)*i/5, y=Y(v); g.beginPath(); g.moveTo(L,y); g.lineTo(L+pw,y); g.stroke(); g.fillText(o.yTick?o.yTick(v):(Math.abs(v)>=100?Math.round(v):v.toFixed(v<10?1:0)),L-6,y); }
+  g.textAlign='center'; g.textBaseline='top';
+  for(let y=2010;y<=XM;y+=2){ g.fillText(y,X(y),T+ph+6); }
+  if(o.refLine!==undefined){ g.strokeStyle=mute; g.setLineDash([4,4]); g.beginPath(); g.moveTo(L,Y(o.refLine)); g.lineTo(L+pw,Y(o.refLine)); g.stroke(); g.setLineDash([]); g.fillStyle=mute; g.textAlign='left'; g.fillText(o.refLabel||'',L+4,Y(o.refLine)-12); }
+  // 2020 marker
+  g.strokeStyle=grid; g.setLineDash([2,4]); g.beginPath(); g.moveTo(X(2020),T); g.lineTo(X(2020),T+ph); g.stroke(); g.setLineDash([]);
+  g.fillStyle=mute; g.textAlign='left'; g.fillText('2020 lockdown',X(2020)+4,T+2);
+  // forecast band 2026-2030 (trend model, 95% interval) + point forecast
+  if(o.fc){ g.save(); g.fillStyle='rgba(209,73,91,.14)'; g.beginPath();
+    o.fc.forEach((f,i)=>{ i?g.lineTo(X(f.y),Y(f.hi)):g.moveTo(X(f.y),Y(f.hi)); });
+    for(let i=o.fc.length-1;i>=0;i--) g.lineTo(X(o.fc[i].y),Y(o.fc[i].lo));
+    g.closePath(); g.fill();
+    g.fillStyle=mute; g.textAlign='right'; g.textBaseline='top'; const l=o.fc[o.fc.length-1];
+    g.fillText('2030: '+l.pt.toFixed(0)+' ('+l.lo.toFixed(0)+'–'+l.hi.toFixed(0)+')',X(2030),Y(l.hi)-16); g.restore(); }
+  // forecast zone + joint low/high band for the observed series
+  if(XM>2026){ g.save(); g.fillStyle=mute; g.globalAlpha=.07; g.fillRect(X(2025.5),T,X(XM)-X(2025.5),ph); g.globalAlpha=1; g.fillStyle=mute; g.textAlign='left'; g.textBaseline='top'; g.font='11px system-ui'; g.fillText('regression forecast',X(2025.5)+5,T+ph-16); g.restore(); }
+  if(o.bandPoly){ const {lo,hi}=o.bandPoly; g.save(); g.fillStyle=o.bandColor||'rgba(209,73,91,.16)'; g.beginPath();
+    hi.forEach((q,i)=>{ i?g.lineTo(X(q.x),Y(q.y)):g.moveTo(X(q.x),Y(q.y)); }); for(let i=lo.length-1;i>=0;i--) g.lineTo(X(lo[i].x),Y(lo[i].y)); g.closePath(); g.fill(); g.restore(); }
+  // series
+  o.series.forEach(s=>{
+    g.strokeStyle=s.color; g.lineWidth=s.w||2;
+    g.beginPath(); s.pts.forEach((p,i)=>{ if(p.x>2025) return; i?g.lineTo(X(p.x),Y(p.y)):g.moveTo(X(p.x),Y(p.y)); }); g.stroke();
+    { const fp=s.pts.filter(p=>p.x>=2025); if(fp.length>1){ g.setLineDash([5,4]); g.beginPath(); fp.forEach((p,i)=>{ i?g.lineTo(X(p.x),Y(p.y)):g.moveTo(X(p.x),Y(p.y)); }); g.stroke(); g.setLineDash([]); } }
+    if(s.band){ const bx=X(2026), t1=Y(s.band[1]), t0=Y(s.band[0]); g.save(); g.strokeStyle=s.color; g.lineWidth=2; g.beginPath(); g.moveTo(bx,t1); g.lineTo(bx,t0); g.moveTo(bx-5,t1); g.lineTo(bx+5,t1); g.moveTo(bx-5,t0); g.lineTo(bx+5,t0); g.stroke(); g.restore(); }
+    s.pts.forEach(p=>{
+      g.beginPath(); g.arc(X(p.x),Y(p.y),3.4,0,Math.PI*2);
+      const solid = !p.kind || ['obs','pib','cpcb','anchor'].includes(p.kind);
+      if(solid){ g.fillStyle=s.color; g.fill(); } else { g.fillStyle=cssv('--card'); g.fill(); g.stroke(); }
+    });
+  });
+  // cursor
+  if(o.cursor){ g.strokeStyle=ink; g.globalAlpha=.55; g.lineWidth=1; g.beginPath(); g.moveTo(X(o.cursor),T); g.lineTo(X(o.cursor),T+ph); g.stroke(); g.globalAlpha=1; }
+  c._geo={L,pw,X,min:2010,max:XM};
+}
+function yearFromEvent(c,e){
+  const r=c.getBoundingClientRect(), x=e.clientX-r.left; const gg=c._geo; if(!gg) return null;
+  const y=Math.round(2010+(x-gg.L)/gg.pw*(gg.max-2010)); return (y<2010||y>gg.max)?null:y;
+}
+const fmtN = v => Math.round(v).toLocaleString('en-IN');
+const KIND = {fc:'regression forecast (2027–30)',pib:'official (PIB/CPCB)',cpcb:'CPCB repository (review)',proj:'projected from Jan–Oct',anchor:'reported',derived:'derived',interp:'interpolated',hold:'held (no data)'};
+
+function draw(){
+  const m=METRICS[state.metric], sc=scenList().filter(s=>state.active.has(s.id));
+  $('mainTitle').textContent = m.label+' — by year and scenario';
+  $('hint').textContent = ['risk','water','top'].includes(state.metric)
+    ? 'Sewage scenarios lower the water side of the risk index; air scenarios lower the PM2.5 side.'
+    : (['pm','per100k','deaths','avoided'].includes(state.metric)
+      ? 'Heads-up: this metric reflects air pollution only, so the sewage scenarios sit on top of the observed line. Switch to the risk index or water index to see them.' : '');
+  const series = sc.map(s=>({name:s.name,color:s.color,w:s.id==='obs'?3:2,
+    pts:YEARS.map((t,i)=>({x:t,y:m.f(R[s.id][i],R.obs[i]),kind:(t>=2026||R.obs[i].pmK==='proj')?'proj':(R.obs[i].pmK==='cpcb'||R.obs[i].pmK==='pib')?'obs':'obs'}))}));
+  series.forEach(s=>s.pts.forEach(p=>{ if(p.x>=2026) p.kind='proj'; }));
+  const bp = (state.metric!=='avoided' && state.active.has('obs')) ? {lo:YEARS.map((t,i)=>({x:t,y:m.f(RB.lo[i],RB.lo[i])})).slice(16), hi:YEARS.map((t,i)=>({x:t,y:m.f(RB.hi[i],RB.hi[i])})).slice(16)} : null;
+  lineChart($('main'),{xmax:2030, bandPoly:bp, series, cursor:state.year, refLine: state.metric==='risk'||state.metric==='water'||state.metric==='top'?1:undefined, refLabel:'2025 observed = 1.00'});
+  // inputs
+  const pmS=M.pm.map(p=>({x:p.y,y:p.v,kind:p.kind})), bodS=M.bod.map(p=>({x:p.y,y:p.v,kind:p.kind}));
+  lineChart($('pmChart'),{xmax:2030,fc:FC,series:[{color:'#d1495b',pts:pmS,w:2.5,band:[PM2026_LO,PM2026_HI]}],cursor:state.year,refLine:40,refLabel:'national standard 40'});
+  lineChart($('bodChart'),{xmax:2030, bandPoly:{lo:YEARS.map(t=>({x:t,y:BREG.at(t,'lo')})).slice(16),hi:YEARS.map(t=>({x:t,y:BREG.at(t,'hi')})).slice(16)}, bandColor:'rgba(42,122,176,.16)', series:[{color:'#2a7ab0',pts:bodS,w:2.5}],cursor:state.year,refLine:3,refLabel:'standard 3'});
+  $('pmChart')._data=pmS; $('bodChart')._data=bodS;
+  // KPIs
+  const i=state.year-2010, r=R[state.dScen][i], o=R.obs[i];
+  const dsc=SCEN.find(s=>s.id===state.dScen);
+  $('kpiScenTag').textContent=dsc.name;
+  const best = scenList().filter(s=>s.id!=='obs').map(s=>({s,a:o.city.deaths-R[s.id][i].city.deaths})).sort((a,b)=>b.a-a.a)[0];
+  $('kpis').innerHTML=[
+    ['Delhi mean PM2.5', r.city.pm.toFixed(0)+' µg/m³', KIND[o.pmK]+' · '+(o.city.pm/40).toFixed(1)+'× national standard (observed)'],
+    ['Yamuna downstream BOD', (o.bodV*(dsc.nc===null?1:dsc.nc/NC_BASE)).toFixed(0)+' mg/L', KIND[o.bodK]+' · standard is 3'],
+    ['Attributable deaths / yr', fmtN(r.city.deaths), r.city.per100k.toFixed(1)+' per 100,000'],
+    ['Citywide risk index', r.city.risk.toFixed(2), '2025 observed = 1.00'],
+    ['Highest-risk district', r.city.topName, 'RRI '+r.city.top.toFixed(2)],
+    ['Children 0–6 breathe', r.city.childPm.toFixed(0)+' µg/m³', 'child-weighted PM2.5 (city '+r.city.pm.toFixed(0)+')'],
+    ['Top-3 districts: deaths vs people', (r.city.top3DeathShare*100).toFixed(0)+'% vs '+(r.city.top3PopShare*100).toFixed(0)+'%', 'share of deaths / share of population'],
+    ['Best lever this year', best.s.name.split(' (')[0], 'avoids ~'+fmtN(best.a)+' deaths/yr'],
+  ].map(k=>`<div class="kpi"><small>${k[0]}</small><strong>${k[1]}</strong><br><em>${k[2]}</em></div>`).join('');
+  // narrative
+  const first=R.obs[0], last=R.obs[15];
+  $('narr').innerHTML = `<b>${state.year}:</b> Delhi’s PM2.5 averaged <b>${o.city.pm.toFixed(0)} µg/m³</b> (${KIND[o.pmK]}). The model attributes about <b>${fmtN(o.city.deaths)}</b> deaths a year to it (${o.city.per100k.toFixed(0)} per 100,000), and the highest-risk district is <b>${o.city.topName}</b>. From 2010 to 2025 the modelled air-pollution death rate changed by <b>${((last.city.per100k/first.city.per100k-1)*100).toFixed(0)}%</b> (early-year monitoring was sparse, so treat the long-run change as indicative), while downstream Yamuna BOD ${M.bod[15].v>M.bod[4].v?'rose':'fell'} from about ${M.bod[4].v.toFixed(0)} (2014) to ${M.bod[15].v.toFixed(0)} mg/L (2025).`;
+  // district view
+  $('dYear').textContent=state.year; $('yearLbl').textContent=state.year;
+  const ds=r.d.slice().sort((a,b)=>b.rri-a.rri); const P3=p3For(r);
+  drawBars(ds); drawMap();
+  $('dtab').innerHTML='<thead><tr><th>District</th><th>Population</th><th>PM2.5</th><th>Air AF %</th><th>Deaths/yr</th><th>per 100k</th><th>Water idx</th><th>Vuln.</th><th>RRI</th><th>P(top-3) '+state.year+'</th></tr></thead><tbody>'+
+    ds.map((x,k)=>`<tr><td>${k+1}. ${x.n}</td><td>${fmtN(x.pop)}</td><td>${x.pm.toFixed(0)}</td><td>${(x.af*100).toFixed(1)}</td><td>${fmtN(x.deaths)}</td><td>${x.per100k.toFixed(1)}</td><td>${x.W.toFixed(2)}</td><td>${x.V.toFixed(2)}</td><td><b>${x.rri.toFixed(2)}</b></td><td>${(P3[x.n]*100).toFixed(0)}%</td></tr>`).join('')+'</tbody>';
+}
+function p3For(r){ // P(district in top 3 by RRI) for the selected year/scenario: 1,000 draws varying weights, district PM pattern and water hazard
+  let a=1234567; const rnd=()=>{ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; };
+  const gau=()=>Math.sqrt(-2*Math.log(rnd()+1e-12))*Math.cos(2*Math.PI*rnd());
+  const totP=DIS.reduce((s,d)=>s+d.pop,0), totC=DIS.reduce((s,d)=>s+d.child,0), mI=DIS.reduce((s,d)=>s+d.pop/totP*(100-d.lit),0);
+  const cr=DIS.map(d=>(d.child/d.pop)/(totC/totP)), ir=DIS.map(d=>(100-d.lit)/mI);
+  const popT=r.d.reduce((s,x)=>s+x.pop,0), cnt=DIS.map(()=>0), N=1000, af=c=>1-Math.exp(-BETA*Math.max(c-C0,0));
+  for(let k=0;k<N;k++){
+    const wa=.4+.4*rnd(), wc=.3+.4*rnd();
+    const A=r.d.map(x=>af(x.pm*Math.exp(.08*gau()))), AM=A.reduce((s,v,i)=>s+r.d[i].pop/popT*v,0);
+    const sc=r.d.map((x,i)=>(wa*A[i]/AM+(1-wa)*x.W*Math.exp(.15*gau()))*(wc*cr[i]+(1-wc)*ir[i]));
+    sc.map((v,i)=>[v,i]).sort((p,q)=>q[0]-p[0]).slice(0,3).forEach(z=>cnt[z[1]]++);
+  }
+  const o={}; DIS.forEach((d,i)=>o[d.n]=cnt[i]/N); return o;
+}
+function drawBars(ds){
+  const c=$('dbar'), {g,w,h}=setupCanvas(c), ink=cssv('--ink'), mute=cssv('--mute'), grid=cssv('--grid');
+  const L=92,Rr=60,T=8,B=22, pw=w-L-Rr, ph=h-T-B, n=ds.length, bh=ph/n*.7;
+  const mx=niceMax(Math.max(...ds.map(d=>d.rri),1.2)*1.05);
+  g.font='12px system-ui'; g.textBaseline='middle';
+  const X=v=>L+v/mx*pw;
+  g.strokeStyle=mute; g.setLineDash([4,4]); g.beginPath(); g.moveTo(X(1),T); g.lineTo(X(1),T+ph); g.stroke(); g.setLineDash([]);
+  g.fillStyle=mute; g.textAlign='center'; g.textBaseline='top'; g.fillText('1.00 = city 2025',X(1),T+ph+4);
+  ds.forEach((d,i)=>{
+    const y=T+i*(ph/n)+(ph/n-bh)/2;
+    g.fillStyle=ink; g.textAlign='right'; g.textBaseline='middle'; g.fillText(d.n,L-8,y+bh/2);
+    const hi=d.rri>=1.1, col= hi?'#d1495b':(d.rri>=0.95?'#edae49':'#4f9d8e');
+    g.fillStyle=col; g.fillRect(L,y,Math.max(1,X(d.rri)-L),bh);
+    g.fillStyle=ink; g.textAlign='left'; g.fillText(d.rri.toFixed(2),X(d.rri)+6,y+bh/2);
+  });
+}
+
+function drawMap(){
+  const c=$('map'); if(!c||!R||!M) return;
+  const sc=SCEN.find(s=>s.id===state.dScen), t=state.year, L=MLAYERS[state.mapLayer];
+  const tv=mapCompute(t,sc.id), ref=MREF;
+  $('mapCtx').textContent=t+' · '+sc.name.split(' (')[0]+' · '+L.label;
+  $('mapScen').value=state.dScen; $('mapLayer').value=state.mapLayer;
+  const {g,w,h}=setupCanvas(c), ink=cssv('--ink'), mute=cssv('--mute'), card=cssv('--card');
+  g.lineJoin='round';
+  const spanX=(GEO.lon1-GEO.lon0)*KX, spanY=GEO.lat1-GEO.lat0, hh=h-46;
+  const s=Math.min((w-10)/spanX,(hh-6)/spanY), ox=(w-spanX*s)/2, oy=(hh-spanY*s)/2+2;
+  const X=lon=>ox+(lon-GEO.lon0)*KX*s, Y=lat=>oy+(GEO.lat1-lat)*s;
+  const cw=GRID.dlon*KX*s, ch=GRID.dlat*s;
+  const poly=()=>{ g.beginPath(); OUT.forEach((p,i)=>i?g.lineTo(X(p[0]),Y(p[1])):g.moveTo(X(p[0]),Y(p[1]))); g.closePath(); };
+  // cells
+  const [d0,d1]=L.dom(ref);
+  g.save(); poly(); g.clip();
+  GRID.cells.forEach((cc,i)=>{ g.fillStyle=ramp((L.val(tv[i])-d0)/(d1-d0)); g.fillRect(X(cc.lon)-cw/2-.4,Y(cc.lat)-ch/2-.4,cw+.8,ch+.8); });
+  g.restore();
+  // hotspot contour
+  const hot=new Uint8Array(GRID.nx*GRID.ny); let nHot=0;
+  GRID.cells.forEach((cc,i)=>{ if(tv[i].score>=ref.thr){ hot[cc.iy*GRID.nx+cc.ix]=1; nHot++; } });
+  if($('mf_hot').checked){
+    g.strokeStyle=ink; g.lineWidth=1.8; g.beginPath();
+    GRID.cells.forEach(cc=>{ if(!hot[cc.iy*GRID.nx+cc.ix]) return;
+      const x0=X(cc.lon)-cw/2, y0=Y(cc.lat)-ch/2;
+      const nb=(dx,dy)=>{ const ix=cc.ix+dx, iy=cc.iy+dy; return ix>=0&&iy>=0&&ix<GRID.nx&&iy<GRID.ny&&hot[iy*GRID.nx+ix]; };
+      if(!nb(-1,0)){g.moveTo(x0,y0);g.lineTo(x0,y0+ch);} if(!nb(1,0)){g.moveTo(x0+cw,y0);g.lineTo(x0+cw,y0+ch);}
+      if(!nb(0,-1)){g.moveTo(x0,y0);g.lineTo(x0+cw,y0);} if(!nb(0,1)){g.moveTo(x0,y0+ch);g.lineTo(x0+cw,y0+ch);} });
+    g.stroke();
+  }
+  // outline
+  g.strokeStyle=mute; g.lineWidth=1.4; poly(); g.stroke();
+  // water lines
+  if($('mf_wat').checked){
+    g.strokeStyle='#2a7ab0'; g.lineWidth=2.6; g.beginPath(); RIV.forEach((p,i)=>i?g.lineTo(X(p[0]),Y(p[1])):g.moveTo(X(p[0]),Y(p[1]))); g.stroke();
+    g.lineWidth=1.8; g.setLineDash([5,3]);
+    [NAJ].forEach(pl=>{ g.beginPath(); pl.forEach((p,i)=>i?g.lineTo(X(p[0]),Y(p[1])):g.moveTo(X(p[0]),Y(p[1]))); g.stroke(); });
+    g.setLineDash([]);
+  }
+  const lab=$('mf_lab').checked;
+  const text=(str,x,y,col,size,bold)=>{ g.font=(bold?'600 ':'')+size+'px system-ui'; g.textAlign='center'; g.textBaseline='middle'; g.lineWidth=3; g.strokeStyle=card; g.strokeText(str,x,y); g.fillStyle=col; g.fillText(str,x,y); };
+  if(lab){ Object.entries(DSEED).forEach(([n,p])=>text(n.toUpperCase(),X(p[0]),Y(p[1]),mute,9.5,true)); }
+  if($('mf_src').checked){
+    LAND.forEach(p=>{ const x=X(p[1]),y=Y(p[2]); g.fillStyle='#111'; g.strokeStyle='#fff'; g.lineWidth=1.2; g.beginPath(); g.moveTo(x,y-6); g.lineTo(x+5.5,y+4.5); g.lineTo(x-5.5,y+4.5); g.closePath(); g.fill(); g.stroke(); if(lab) text(p[0].replace(' landfill',''),x,y+14,ink,9.5,false); });
+    IND.forEach(p=>{ const x=X(p[1]),y=Y(p[2]); g.fillStyle='#4a4a4a'; g.strokeStyle='#fff'; g.lineWidth=1.2; g.fillRect(x-4,y-4,8,8); g.strokeRect(x-4,y-4,8,8); });
+  }
+  if($('mf_stn').checked){
+    const LO={'Jahangirpuri':[9,-9,'left'],'Rohini':[-9,-9,'right'],'Wazirpur':[-9,10,'right'],'Ashok Vihar':[9,10,'left'],'Anand Vihar':[-9,-9,'right'],'Bawana':[0,-11,'center'],'Mundka':[0,-11,'center']};
+    STN.forEach(p=>{ const x=X(p[1]),y=Y(p[2]); g.fillStyle='#fff'; g.strokeStyle=ink; g.lineWidth=1.8; g.beginPath(); g.arc(x,y,4.2,0,Math.PI*2); g.fill(); g.stroke();
+      if(lab){ const o=LO[p[0]]||[0,-11,'center']; g.font='9.5px system-ui'; g.textAlign=o[2]; g.textBaseline='middle'; g.lineWidth=3; g.strokeStyle=card; g.strokeText(p[0],x+o[0],y+o[1]); g.fillStyle=ink; g.fillText(p[0],x+o[0],y+o[1]); } });
+  }
+  // legend
+  const lx=14, ly=hh+14, lw=Math.min(220,w-120), steps=40;
+  for(let i=0;i<steps;i++){ g.fillStyle=ramp(i/(steps-1)); g.fillRect(lx+i*lw/steps,ly,lw/steps+.6,10); }
+  g.font='11px system-ui'; g.fillStyle=mute; g.textBaseline='top'; g.textAlign='left'; g.fillText(L.fmt(d0),lx,ly+13);
+  g.textAlign='right'; g.fillText(L.fmt(d1)+(state.mapLayer==='air'?'+':''),lx+lw,ly+13);
+  g.textAlign='left'; g.textBaseline='middle'; g.fillText(L.unit,lx+lw+10,ly+5);
+  c._m={ox,oy,s,tv,ref};
+  // stats
+  const area=nHot*GRID.cellKm2, tot=GRID.cells.length*GRID.cellKm2, mean=tv.reduce((a,x)=>a+x.score,0)/tv.length;
+  $('mapStats').innerHTML=`Hotspot area (index ≥ ${ref.thr.toFixed(2)}, the 2025 top-10% line): <b>${Math.round(area)} km²</b> (${(area/tot*100).toFixed(0)}% of the sketch) · area-average index <b>${mean.toFixed(2)}</b> vs 1.00 in 2025.`;
+  // top hotspot clusters
+  const order=tv.map((_,i)=>i).sort((a,b)=>tv[b].score-tv[a].score), picks=[];
+  for(const i of order){ if(picks.length>=6) break; const cc=GRID.cells[i]; if(picks.every(j=>Math.hypot(GRID.cells[j].x-cc.x,GRID.cells[j].y-cc.y)>=3.5)) picks.push(i); }
+  $('hotlist').innerHTML=picks.map(i=>{ const cc=GRID.cells[i], tm=tv[i];
+    let nb=null, nd=1e9; FEATS.forEach(f=>{ const d=Math.hypot(cc.x-kmX(f[1]),cc.y-kmY(f[2])); if(d<nd){nd=d;nb=f;} });
+    const where=nd<=2.5?('Near '+nb[0]):(nd.toFixed(0)+' km from '+nb[0]);
+    const sh=tm.tAir+tm.tWat+tm.tSrc||1, pc=v=>Math.round(v/sh*100)+'%';
+    return `<li><b>${where}</b> · ${DIS[cc.di].n}<br><span class="sub">index ${tm.score.toFixed(2)} · PM2.5 ${tm.pm.toFixed(0)} µg/m³<br>hazard mix: air ${pc(tm.tAir)} · water ${pc(tm.tWat)} · local sources ${pc(tm.tSrc)}${tm.V>1.05?' · amplified by higher vulnerability':''}</span></li>`; }).join('');
+}
+
+// ---------- wiring ----------
+function init(){
+  $('metric').innerHTML=Object.entries(METRICS).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  $('metric').value=state.metric;
+  $('dScen').innerHTML=SCEN.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+  $('chips').innerHTML=SCEN.map(s=>`<span class="chip${state.active.has(s.id)?'':' off'}" data-id="${s.id}"><i style="background:${s.color}"></i>${s.name}</span>`).join('');
+  $('chips').addEventListener('click',e=>{ const c=e.target.closest('.chip'); if(!c) return; const id=c.dataset.id;
+    if(state.active.has(id)){ if(state.active.size>1) state.active.delete(id);} else state.active.add(id);
+    c.classList.toggle('off',!state.active.has(id)); draw(); });
+  $('metric').onchange=e=>{state.metric=e.target.value;draw();};
+  $('dScen').onchange=e=>{state.dScen=e.target.value;$('mapScen').value=state.dScen;draw();};
+  $('mapScen').innerHTML=SCEN.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+  $('mapLayer').innerHTML=Object.entries(MLAYERS).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  $('mapScen').onchange=e=>{state.dScen=e.target.value;$('dScen').value=state.dScen;draw();};
+  $('mapLayer').onchange=e=>{state.mapLayer=e.target.value;draw();};
+  ['mf_hot','mf_stn','mf_wat','mf_src','mf_lab'].forEach(id=>$(id).onchange=()=>draw());
+  $('ws').oninput=e=>{P.ws=+e.target.value;$('wsLbl').textContent=(+e.target.value).toFixed(2);recompute();};
+  $('year').oninput=e=>{state.year=+e.target.value;draw();};
+  $('pmSeries').onchange=e=>{P.series=e.target.value;recompute();};
+  const bind=(id,key,lbl,fn)=>{ $(id).oninput=e=>{ P[key]=fn(+e.target.value); if(lbl) $(lbl).textContent=$(id).value.replace(/^(\d+)$/,'$1'); recompute(); }; };
+  $('cut').oninput=e=>{P.cut=+e.target.value/100;$('cutLbl').textContent=e.target.value+'%';recompute();};
+  $('comp').oninput=e=>{P.comp=+e.target.value/100;$('compLbl').textContent=e.target.value+'%';recompute();};
+  $('g').oninput=e=>{P.g=+e.target.value;$('gLbl').textContent=(+e.target.value).toFixed(2);recompute();};
+  $('cdr').oninput=e=>{P.cdr=+e.target.value;$('cdrLbl').textContent=(+e.target.value).toFixed(1);recompute();};
+  $('wa').oninput=e=>{P.wa=+e.target.value;$('waLbl').textContent=(+e.target.value).toFixed(2);recompute();};
+  $('wc').oninput=e=>{P.wc=+e.target.value;$('wcLbl').textContent=(+e.target.value).toFixed(2);recompute();};
+  $('su').oninput=e=>{P.su=+e.target.value;$('suLbl').textContent=(+e.target.value).toFixed(2);recompute();};
+  // play
+  let timer=null;
+  $('play').onclick=()=>{ if(timer){clearInterval(timer);timer=null;$('play').textContent='▶ Play';return;}
+    $('play').textContent='❚❚ Pause'; if(state.year>=2030) state.year=2009;
+    timer=setInterval(()=>{ state.year++; if(state.year>2030){clearInterval(timer);timer=null;state.year=2030;$('play').textContent='▶ Play';} $('year').value=state.year; draw(); },650); };
+  // tooltips + click-to-set-year
+  const tip=$('tip');
+  const hover=(c,html)=>{
+    c.addEventListener('mousemove',e=>{ const y=yearFromEvent(c,e); if(y===null){tip.style.display='none';return;}
+      tip.innerHTML=html(y); tip.style.display='block'; tip.style.left=Math.min(e.clientX+14,window.innerWidth-280)+'px'; tip.style.top=(e.clientY+14)+'px'; });
+    c.addEventListener('mouseleave',()=>tip.style.display='none');
+    c.addEventListener('click',e=>{ const y=yearFromEvent(c,e); if(y!==null){state.year=y;$('year').value=y;draw();} });
+  };
+  hover($('main'),y=>{ const m=METRICS[state.metric], i=y-2010;
+    return `<b>${y}</b> <span class="tag">${KIND[R.obs[i].pmK]}</span><br>`+scenList().filter(s=>state.active.has(s.id)).map(s=>`<i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${s.color}"></i> ${s.name.split(' (')[0]}: <b>${m.fmt(m.f(R[s.id][i],R.obs[i]))}</b>`).join('<br>'); });
+  hover($('pmChart'),y=>{ if(y>2026){ const f=FC.find(r=>r.y===y); return `<b>${y}</b>: ${f.pt.toFixed(0)} µg/m³ <span class="tag">regression forecast</span><br>95% band ${f.lo.toFixed(0)}–${f.hi.toFixed(0)} (trend model)`; } const p=M.pm[y-2010]; return `<b>${y}</b>: ${p.v.toFixed(1)} µg/m³<br><span class="tag">${KIND[p.kind]}</span>`+(y===2026?`<br>Jan–29 Oct avg ${YTD[2026]}; 95% PI ${PM2026_LO.toFixed(0)}–${PM2026_HI.toFixed(0)}`:''); });
+  hover($('bodChart'),y=>{ const p=M.bod[y-2010]; return `<b>${y}</b>: ${p.v.toFixed(1)} mg/L<br><span class="tag">${KIND[p.kind]}</span>`+(y>2025?`<br>95% band ${BREG.at(y,'lo').toFixed(0)}–${BREG.at(y,'hi').toFixed(0)} (5 anchors only)`:''); });
+  // map hover
+  $('map').addEventListener('mousemove',e=>{
+    const mc=$('map'), m=mc._m; if(!m){return;}
+    const r=mc.getBoundingClientRect(), px=e.clientX-r.left, py=e.clientY-r.top;
+    const lon=GEO.lon0+(px-m.ox)/(KX*m.s), lat=GEO.lat1-(py-m.oy)/m.s;
+    const ix=Math.floor((lon-GEO.lon0)/GRID.dlon), iy=Math.floor((GEO.lat1-lat)/GRID.dlat);
+    if(ix<0||iy<0||ix>=GRID.nx||iy>=GRID.ny){tip.style.display='none';return;}
+    const k=GRID.at[iy*GRID.nx+ix]; if(k<0){tip.style.display='none';return;}
+    const tm=m.tv[k], cc=GRID.cells[k];
+    tip.innerHTML=`<b>${DIS[cc.di].n}</b> <span class="tag">nearest-district shading</span><br>Hotspot index <b>${tm.score.toFixed(2)}</b>${tm.score>=m.ref.thr?' (hotspot)':''}<br>PM2.5 ${tm.pm.toFixed(0)} µg/m³<br>Water hazard ${tm.Wn.toFixed(2)} · Local sources ${tm.Sn.toFixed(2)}<br>Vulnerability ${tm.V.toFixed(2)}<br>Main driver: ${driverOf(tm)}`;
+    tip.style.display='block'; tip.style.left=Math.min(e.clientX+14,window.innerWidth-280)+'px'; tip.style.top=(e.clientY+14)+'px'; });
+  $('map').addEventListener('mouseleave',()=>tip.style.display='none');
+  // csv
+  $('csv').onclick=()=>{
+    const rows=[['year','scenario','delhi_pm25','attrib_deaths','deaths_per_100k','citywide_risk_index','water_index','highest_risk_district','highest_RRI','pm25_data_kind','bod_data_kind']];
+    scenList().forEach(s=>R[s.id].forEach(r=>rows.push([r.t,s.name,r.city.pm.toFixed(2),r.city.deaths.toFixed(0),r.city.per100k.toFixed(2),r.city.risk.toFixed(3),r.city.water.toFixed(3),r.city.topName,r.city.top.toFixed(3),r.pmK,r.bodK])));
+    const blob=new Blob([rows.map(r=>r.map(v=>`"${v}"`).join(',')).join('\n')],{type:'text/csv'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='delhi_pollution_scenarios_2010_2030.csv'; a.click(); };
+  // notes
+  $('notes').innerHTML=[
+   `<b>PM2.5 2018–2025</b>: PIB release (CPCB data). <b>2010–2017</b>: CPCB-repository annual means compiled in a peer-reviewed review; few monitors operated early on, so these are not strictly comparable with post-2018 city averages, and the review repeats some values (e.g. 117.2 in 2014 and 2017) exactly as reported. The two series differ by up to 6 µg/m³ in 2018–22; use the selector to compare.`,
+   `<b>2026</b>: only year-to-date data exist (Jan–29 Oct mean = ${YTD[2026]} µg/m³; 2025 same period = ${YTD[2025]}). Full-year projection from a regression of full-year mean on the Jan–Oct mean (2018–25, n=8; full-year = ${REG.a0.toFixed(1)} + ${REG.b.toFixed(2)} × Jan–Oct) = <b>${PM2026.toFixed(0)}</b> (95% prediction interval ${PM2026_LO.toFixed(0)}–${PM2026_HI.toFixed(0)}; the earlier ratio method gave ≈88 and had a larger leave-one-out error). The Nov–Dec smog season could push the real figure higher.`,
+   `<b>2027–2030 forecasts</b> (regression, grey-shaded zone): <b>PM2.5</b> = log-linear trend with a 2020 dip fitted to 2010–25 and chosen by forward-chaining cross-validation (error 8.0 vs 8.9 µg/m³ for the best naive baseline; band = residual-bootstrap 95% interval); 2026 = the Jan–Oct regression. <b>Yamuna BOD</b> = straight-line OLS through the five anchors (${BREG.b.toFixed(1)} mg/L per year); with only five points the slope is not statistically distinguishable from zero and the 95% interval (capped at 100 mg/L) is extremely wide – treat the BOD line as “no clear improvement”, not a prediction. The risk, death and water metrics for 2027–30 are those same inputs run through the model; the band on the main chart reflects <b>PM2.5 uncertainty only</b>. District air pattern, vulnerability, and sewage capacity are held at current values; district populations continue only part of their 2001–11 growth (slider). No sewage-treatment or policy trend is assumed, so only the scenarios you switch on change the picture.`,
+   `<b>Yamuna BOD</b> (mean of Nizamuddin, Okhla, Asgarpur): reported anchors for 2017 (${BOD_ANCH[2017].toFixed(1)}), 2021 (${BOD_ANCH[2021].toFixed(1)}, derived: Economic Survey gives Okhla 54.4 and Asgarpur 58; Nizamuddin is estimated), 2022 (${BOD_ANCH[2022].toFixed(1)}) and Jan–Jun 2025 (${BOD_ANCH[2025].toFixed(1)}); 2014 (${BOD_ANCH[2014].toFixed(1)}) is derived from a different report’s Okhla 2014/2017 ratio; years in between are linearly interpolated; <b>2010–2013 are held at the 2014 value and 2026 at 2025 because no annual data were retrieved.</b> Anchors come from different publications and may use different averaging.`,
+   `<b>Water hazard</b> in the risk index scales with BOD relative to 2025; 2025 itself uses the full BOD + faecal coliform + DO index (0.77 downstream) from the Python model. Sewage scenarios cut the water hazard in proportion to the non-compliant sewage share (2025: 44% non-compliant, i.e. 2,014 of 3,596 MLD treated to DPCC norms). Sewage anchors are not comparable across years: 2015 – 3,800 MLD generated, 1,576 treated (41%); Jan 2023 – 768 MGD generated, ~365 MGD treated, 9 of 35 STPs compliant; Jun 2025 – 3,596 MLD generated, 2,955 utilised, 2,014 compliant; Economic Survey 2025-26 – capacity 794 MGD, 584 MGD treated.`,
+   `<b>Deaths</b> = population × crude death rate (4.5 per 1,000, SRS 2023, held constant) × attributable fraction, with a log-linear exposure–response of +1.42% per 10 µg/m³ above 15 µg/m³ (Lancet Planetary Health, 2024). Checked against that study: 11.3% attributable at 100 µg/m³ vs 11.5% reported. Population is the Census 2011 base unless you set a growth rate, so absolute deaths are likely understated; per-100,000 values are unaffected.`,
+   `<b>Districts</b>: <b>population changes by year</b> (Census 2011 × each district’s 2001–11 decadal growth, converted to a yearly rate; after 2011 only the share set by the slider, default 60%, of that trend continues because Delhi’s growth is slowing – an assumption, which fast-growing outer districts such as South West and North West benefit from and shrinking Central and New Delhi lose from). The PM2.5 pattern across districts, child share and the informal-housing proxy stay at 2025 / Census-2011 values, because no district-level history was retrieved; district PM2.5, deaths, water index and RRI do change with the city-level PM2.5 and BOD of each year. Only three districts have named monitoring stations in the retrieved data; the others are calibrated to the city mean, so district ranks are most reliable at the top (North West, North East).`,
+   `<b>Hotspot map (schematic)</b>: I could not download official district boundaries (the sandbox blocked the download), so the outline is a hand-simplified polygon of NCT Delhi (about 1,650 km² as drawn vs 1,483 km² actual) and district shading is nearest-centroid, not true boundaries. Replace it with the Survey of India / Census 2011 boundary file for a precise map.`,
+   `<b>Map layers.</b> <i>Air</i>: the 7 stations with annual PM2.5 retrieved (Jahangirpuri, Bawana, Wazirpur, Rohini, Ashok Vihar, Mundka, Anand Vihar; mid-point of the reported range, approximate coordinates) are blended with a city background of 0.93× by distance (σ = 3 km), then scaled to the selected year and scenario. Between stations this is an interpolation, not a measurement. <i>Water</i>: closeness to the Yamuna (severity interpolated along the river between the 2025 NWMP BOD means at Palla, Nizamuddin, Okhla and Asgarpur) and to the Najafgarh drain (approximate course; severity set to 0.8 of the worst river reading, an assumption). Other drains (Shahdara, Barapullah and so on) are not mapped because I had no verified course for them, and water that reaches people through taps or groundwater is not represented. <i>Local sources</i>: Bhalswa, Ghazipur and Okhla landfills and six industrial areas, at approximate positions from general knowledge, not from an official dataset retrieved here; default weight 0.15, adjustable in Advanced assumptions. <i>Vulnerability</i>: the district value from the model.`,
+   `<b>Hotspot definition.</b> Combined index = vulnerability × [(1−w)·(air weight × air + water weight × water) + w·local sources], each term scaled to its own 2025 top-10% value, with the water and local-source terms passed through log₂(1+x) so that a narrow corridor of extreme readings does not swamp the broader air pattern (a modelling choice; the order of the top hotspots depends on it), then the whole index is scaled so the 2025 area average is 1. A hotspot is any cell at or above the 2025 top-10% threshold, so the outlined area grows or shrinks with the year and scenario. The map averages by land area, not population, and cannot show indoor exposure, traffic corridors, construction dust or crop-burning smoke.`,
+  ].map(t=>`<li>${t}</li>`).join('');
+  window.addEventListener('resize',()=>draw());
+  recompute();
+}
+if(typeof document!=='undefined' && document.getElementById) init();
+
+(function(){ const L=document.getElementById('launch');
+  const openD=()=>{ L.classList.add('hide'); try{sessionStorage.setItem('dashOpen','1');}catch(e){} window.dispatchEvent(new Event('resize')); };
+  document.getElementById('open').addEventListener('click',openD);
+  document.getElementById('dock').addEventListener('click',()=>{ L.classList.remove('hide'); try{sessionStorage.removeItem('dashOpen');}catch(e){} });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!L.classList.contains('hide')) openD(); });
+  try{ if(sessionStorage.getItem('dashOpen')) L.classList.add('hide'); }catch(e){}
+})();
+</script>
+</body>
+</html>

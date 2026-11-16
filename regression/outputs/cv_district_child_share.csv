@@ -1,0 +1,5 @@
+model,loo_rmse,loo_r2
+Baseline: district mean,1.477,-0.266
+Literacy only,1.396,-0.13
+Growth 2001-11 only,0.935,0.493
+Ridge: literacy + log density + growth,0.285,0.953
